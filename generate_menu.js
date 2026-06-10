@@ -1,0 +1,514 @@
+const fs = require('fs');
+
+const getFallbackMenuImage = (name) => {
+  const lowerName = name.toLowerCase();
+  const keywordRules = [
+    ['mie', '/images/Mie Goreng.png'],
+    ['kwetiaw', '/images/Kwetiaw Goreng.png'],
+    ['bihun', '/images/Bihun Goreng.png'],
+    ['indomie', '/images/INTERNET (2).png'],
+    ['chicken wings', '/images/CHIKENWING.png'],
+    ['chicken nugget', '/images/CHIKENNUGGET.png'],
+    ['kentang', '/images/KENTANGGORENG.png'],
+    ['sosis', '/images/SOSISGORENG.png'],
+    ['onion ring', '/images/onion-ring.jpg'],
+    ['pisang', '/images/PISANGKEJUCOKLAT.png'],
+    ['cireng', '/images/Cireng.jpg'],
+    ['tempe', '/images/Tempe-Mendoan.jpg'],
+    ['tahu', '/images/TAHU-BAKSO.jpeg'],
+    ['telur', '/images/TELUR-DADAR.jpg'],
+    ['paru', '/images/PARU.jpg'],
+    ['pempek', '/images/OTE-OTE.jpg'],
+    ['sop iga', '/images/SOP-IGA-SAPI.png'],
+    ['ayam lada hitam', '/images/ayam-lada-hitam.png'],
+    ['ayam', '/images/resep-ayam-goreng-krispi-korea_43.jpeg'],
+    ['sapi', '/images/SAPI-LADA-HITAM.png'],
+    ['udang', '/images/UDANGGORENGTEPUNG.png'],
+    ['cumi', '/images/cumi-treyaki.png'],
+    ['fu yung hai', '/images/fu-yung-hay.jpg'],
+    ['cap cay', '/images/CAPCAY.png'],
+    ['salad', '/images/salad-buah.png'],
+    ['buah', '/images/buah-segar (1).png'],
+    ['ice cream', '/images/escream-buah.png'],
+    ['frozz', '/images/frozz.webp'],
+    ['hexos', '/images/hexos.png'],
+    ['chunky', '/images/cb.jpg'],
+    ['cadbury', '/images/cadburry.jpg'],
+    ['silverqueen', '/images/sq.jpeg'],
+    ['delfi', '/images/delfy.webp'],
+    ['kacang', '/images/KACANGBAWANG.png'],
+    ['pringles', '/images/pringles.jpg'],
+    ['chitato', '/images/Chitato.jpg'],
+    ['qtela', '/images/qtela.jpg'],
+    ['milk shake', '/images/milkshake.png'],
+    ['coca-cola', '/images/coca-cola.png'],
+    ['fanta', '/images/fanta.jpg'],
+    ['sprite', '/images/sprite.jpg'],
+    ['pokka', '/images/pokka-greetea.jpeg'],
+    ['soda', '/images/soda-gembira.jpg'],
+    ['krating', '/images/krating-deng.jpg'],
+    ['yakult', '/images/Yakult.jpg'],
+    ['air mineral', '/images/cleo.png'],
+    ['milo', '/images/dingin.png'],
+    ['teh', '/images/dingin.png'],
+    ['jeruk', '/images/Jus Jeruk.png'],
+    ['susu', '/images/milkshake.png'],
+    ['cappuccino', '/images/hot.png'],
+    ['kopi', '/images/hot.png'],
+    ['rokok', '/images/rokok/sampoerna-mild.jpg'],
+    ['marlboro', '/images/rokok/malboro-merah.png'],
+    ['marboro', '/images/rokok/malboro-merah.png'],
+    ['sampoerna', '/images/rokok/sampoerna-mild.jpg'],
+    ['la ', '/images/rokok/la-light.jpg'],
+    ['esse', '/images/rokok/esse-change.png'],
+    ['korek', '/images/rokok/korek.jpeg'],
+  ];
+
+  const matchedRule = keywordRules.find(([keyword]) => lowerName.includes(keyword));
+
+  return matchedRule ? matchedRule[1] : '/images/Logohappup.png';
+};
+
+const getProductKnowledge = (name) => {
+  const lowerName = name.toLowerCase();
+  const knowledgeRules = [
+    ['nasi cap cay', 'Nasi hangat dengan tumisan sayur cap cay gurih.'],
+    ['nasi goreng seafood', 'Nasi goreng berbumbu dengan campuran seafood.'],
+    ['nasi goreng ikan asin', 'Nasi goreng gurih dengan aroma khas ikan asin.'],
+    ['nasi goreng jawa', 'Nasi goreng bumbu Jawa dengan rasa manis gurih.'],
+    ['nasi goreng hongkong', 'Nasi goreng ringan ala Hongkong dengan isian gurih.'],
+    ['nasi goreng sosis', 'Nasi goreng gurih dengan potongan sosis.'],
+    ['nasi goreng cumi', 'Nasi goreng gurih dengan tambahan cumi.'],
+    ['nasi goreng udang', 'Nasi goreng gurih dengan tambahan udang.'],
+    ['nasi goreng ayam', 'Nasi goreng gurih dengan potongan ayam.'],
+    ['nasi goreng spesial', 'Nasi goreng favorit dengan topping spesial.'],
+    ['nasi goreng original', 'Nasi goreng klasik dengan bumbu gurih.'],
+    ['mie goreng seafood', 'Mie goreng berbumbu dengan campuran seafood.'],
+    ['mie goreng udang', 'Mie goreng gurih dengan tambahan udang.'],
+    ['mie goreng jawa', 'Mie goreng bumbu Jawa dengan rasa manis gurih.'],
+    ['mie goreng spesial', 'Mie goreng favorit dengan topping spesial.'],
+    ['mie kuah', 'Mie berkuah hangat dengan bumbu gurih.'],
+    ['mi godok', 'Mie rebus hangat dengan kuah berbumbu.'],
+    ['indomie', 'Indomie dengan telur dan kornet yang mengenyangkan.'],
+    ['kwetiaw goreng seafood', 'Kwetiaw goreng kenyal dengan campuran seafood.'],
+    ['kwetiaw goreng', 'Kwetiaw goreng kenyal dengan bumbu gurih.'],
+    ['bihun goreng seafood', 'Bihun goreng ringan dengan campuran seafood.'],
+    ['bihun goreng', 'Bihun goreng berbumbu dengan tekstur lembut.'],
+    ['chicken nugget', 'Nugget ayam renyah untuk camilan praktis.'],
+    ['chicken wings', 'Sayap ayam gurih dengan tekstur juicy.'],
+    ['kentang goreng', 'Kentang goreng renyah cocok untuk berbagi.'],
+    ['sosis goreng', 'Sosis goreng gurih dengan bagian luar renyah.'],
+    ['onion ring', 'Bawang bombai berbalut tepung renyah.'],
+    ['pisang keju coklat', 'Pisang hangat dengan keju dan coklat manis.'],
+    ['pisang keju', 'Pisang hangat dengan taburan keju gurih.'],
+    ['snack kombinasi', 'Paket camilan campur untuk dinikmati bersama.'],
+    ['cireng', 'Aci goreng kenyal dengan bagian luar renyah.'],
+    ['tempe mendoan', 'Tempe berbalut tepung tipis khas mendoan.'],
+    ['tahu bakso', 'Tahu isi bakso dengan rasa gurih.'],
+    ['tahu cabe garam', 'Tahu goreng renyah dengan cabe garam.'],
+    ['telur dadar', 'Telur dadar gurih sebagai lauk pendamping.'],
+    ['telur mata sapi', 'Telur ceplok sederhana untuk pelengkap menu.'],
+    ['paru goreng crispy', 'Paru goreng renyah dengan rasa gurih.'],
+    ['paru goreng pedas', 'Paru goreng gurih dengan sensasi pedas.'],
+    ['nachos', 'Keripik jagung renyah dengan saus keju.'],
+    ['ote-ote', 'Gorengan sayur gurih khas rumahan.'],
+    ['pempek', 'Olahan ikan gurih dengan cita rasa khas Palembang.'],
+    ['sop iga', 'Sup iga sapi hangat dengan kuah kaldu gurih.'],
+    ['ayam goreng tepung', 'Ayam berbalut tepung renyah dan gurih.'],
+    ['ayam goreng kering', 'Ayam goreng gurih dengan tekstur kering.'],
+    ['ayam goreng mentega', 'Ayam gurih dimasak dengan saus mentega.'],
+    ['ayam asam manis', 'Ayam dengan saus asam manis segar.'],
+    ['ayam saos teriyaki', 'Ayam dengan saus teriyaki manis gurih.'],
+    ['ayam lada hitam', 'Ayam berbumbu lada hitam yang harum.'],
+    ['sapi lada hitam', 'Daging sapi dengan saus lada hitam gurih.'],
+    ['udang goreng tepung', 'Udang berbalut tepung renyah dan gurih.'],
+    ['udang mayonaise', 'Udang gurih dengan saus mayonaise creamy.'],
+    ['udang saos tiram', 'Udang dimasak saus tiram gurih.'],
+    ['udang asam manis', 'Udang dengan saus asam manis segar.'],
+    ['udang saos mentega', 'Udang gurih dengan saus mentega.'],
+    ['udang saos teriyaki', 'Udang dengan saus teriyaki manis gurih.'],
+    ['cumi asam manis', 'Cumi dengan saus asam manis segar.'],
+    ['cumi saos tiram', 'Cumi dimasak saus tiram gurih.'],
+    ['cumi goreng kering', 'Cumi goreng gurih dengan tekstur kering.'],
+    ['cumi saos teriyaki', 'Cumi dengan saus teriyaki manis gurih.'],
+    ['cumi saos mentega', 'Cumi gurih dengan saus mentega.'],
+    ['fu yung hai', 'Telur dadar tebal dengan isian dan saus gurih.'],
+    ['cap cay goreng', 'Tumisan sayur campur dengan bumbu gurih.'],
+    ['cap cay kuah', 'Sayur campur berkuah hangat dan gurih.'],
+    ['salad buah', 'Buah segar dengan saus salad creamy.'],
+    ['buah segar spesial', 'Pilihan buah segar dalam porsi spesial.'],
+    ['buah segar', 'Potongan buah segar untuk pilihan ringan.'],
+    ['ice cream buah', 'Es krim manis dengan tambahan buah segar.'],
+    ['frozz', 'Permen mint untuk penyegar mulut.'],
+    ['hexos', 'Permen pelega tenggorokan rasa mint.'],
+    ['chunky', 'Cokelat batangan dengan rasa manis pekat.'],
+    ['cadbury', 'Cokelat susu kemasan untuk camilan manis.'],
+    ['silverqueen', 'Cokelat kacang kemasan favorit.'],
+    ['delfi', 'Cokelat kemasan dengan rasa manis lembut.'],
+    ['kacang bawang', 'Kacang gurih dengan aroma bawang.'],
+    ['pringles', 'Keripik kentang renyah dalam kemasan.'],
+    ['chitato', 'Keripik kentang renyah dengan rasa gurih.'],
+    ['qtela', 'Keripik singkong renyah untuk camilan.'],
+    ['jus alpokat', 'Jus alpukat creamy dengan rasa manis lembut.'],
+    ['jus apel', 'Jus apel segar dengan rasa manis ringan.'],
+    ['jus jeruk', 'Jus jeruk segar dengan rasa asam manis.'],
+    ['jus mangga', 'Jus mangga manis dengan tekstur lembut.'],
+    ['jus melon', 'Jus melon segar dengan aroma harum.'],
+    ['jus semangka', 'Jus semangka segar dan ringan.'],
+    ['jeruk murni', 'Perasan jeruk segar tanpa campuran berlebihan.'],
+    ['milk shake coklat', 'Milkshake coklat creamy dan dingin.'],
+    ['milk shake strawberry', 'Milkshake strawberry creamy dan segar.'],
+    ['milk shake vanilla', 'Milkshake vanilla creamy dengan rasa lembut.'],
+    ['coca-cola pitcher', 'Minuman soda cola dalam porsi berbagi.'],
+    ['coca-cola can', 'Minuman soda cola dingin dalam kaleng.'],
+    ['fanta merah pitcher', 'Soda rasa buah dalam porsi berbagi.'],
+    ['fanta merah can', 'Soda rasa buah dingin dalam kaleng.'],
+    ['sprite pitcher', 'Soda lemon-lime dalam porsi berbagi.'],
+    ['sprite can', 'Soda lemon-lime dingin dalam kaleng.'],
+    ['greensands', 'Minuman sparkling ringan dan menyegarkan.'],
+    ['pokka green tea', 'Teh hijau kemasan dengan rasa ringan.'],
+    ['soda gembira', 'Soda susu manis yang creamy dan segar.'],
+    ['fanta susu', 'Perpaduan soda dan susu yang manis segar.'],
+    ['krating daeng', 'Minuman energi dalam kemasan botol.'],
+    ['pulpy orange', 'Minuman jeruk dengan bulir buah.'],
+    ['yakult', 'Minuman probiotik kecil dengan rasa asam manis.'],
+    ['air mineral', 'Air mineral kemasan untuk pelepas dahaga.'],
+    ['milo hot', 'Minuman cokelat malt hangat.'],
+    ['milo ice', 'Minuman cokelat malt dingin.'],
+    ['es jeruk nipis', 'Jeruk nipis dingin dengan rasa segar.'],
+    ['es jeruk', 'Jeruk dingin dengan rasa asam manis.'],
+    ['teh hot', 'Teh hangat klasik untuk pendamping menu.'],
+    ['es teh', 'Teh dingin manis dan menyegarkan.'],
+    ['jeruk nipis hot', 'Jeruk nipis hangat dengan rasa segar.'],
+    ['jeruk hot', 'Jeruk hangat dengan rasa asam manis.'],
+    ['lemon tea pitcher', 'Lemon tea segar dalam porsi berbagi.'],
+    ['lemon tea hot', 'Teh lemon hangat dengan rasa segar.'],
+    ['lemon tea ice', 'Teh lemon dingin yang menyegarkan.'],
+    ['susu putih hot', 'Susu putih hangat dengan rasa lembut.'],
+    ['susu putih ice', 'Susu putih dingin yang creamy.'],
+    ['susu coklat hot', 'Susu coklat hangat dengan rasa manis.'],
+    ['susu coklat ice', 'Susu coklat dingin yang creamy.'],
+    ['teh pitcher', 'Teh dalam porsi pitcher untuk berbagi.'],
+    ['cappuccino', 'Kopi susu dengan karakter creamy.'],
+    ['kopi', 'Minuman kopi klasik dengan aroma kuat.'],
+    ['korek api', 'Korek api praktis untuk kebutuhan pelanggan.'],
+    ['rokok', 'Produk rokok kemasan untuk pelanggan dewasa.'],
+    ['avolution', 'Produk rokok kemasan untuk pelanggan dewasa.'],
+    ['la light', 'Produk rokok kemasan untuk pelanggan dewasa.'],
+    ['marlboro', 'Produk rokok kemasan untuk pelanggan dewasa.'],
+    ['marboro', 'Produk rokok kemasan untuk pelanggan dewasa.'],
+    ['sampoerna', 'Produk rokok kemasan untuk pelanggan dewasa.'],
+    ['esse', 'Produk rokok kemasan untuk pelanggan dewasa.'],
+  ];
+
+  const matchedRule = knowledgeRules.find(([keyword]) => lowerName.includes(keyword));
+
+  return matchedRule ? matchedRule[1] : 'Pilihan menu favorit dengan rasa khas Happy Puppy.';
+};
+
+const createItem = (name, price, icon, image = null) => ({
+  name,
+  price,
+  icon,
+  image: image ? image : getFallbackMenuImage(name),
+  description: getProductKnowledge(name),
+});
+
+const menuCategories = [
+  {
+    id: 'nasi',
+    label: 'Nasi Goreng',
+    items: [
+      createItem('Nasi Cap Cay', 56000, 'NC', '/images/CAPCAY.png'),
+      createItem('Nasi Goreng Ayam', 56000, 'NG', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Hongkong', 56000, 'NG', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Ikan Asin', 56000, 'NG', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Jawa', 56000, 'NG', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Seafood', 62000, 'NS', '/images/Nasi-goreng-seafood.jpg'),
+      createItem('Nasi Goreng Original', 56000, 'NO', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Spesial', 56000, 'NS', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Sosis', 56000, 'NG', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Cumi', 56000, 'NG', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Udang', 56000, 'NG', '/images/Nasi Goreng.png'),
+    ],
+  },
+  {
+    id: 'mie',
+    label: 'Mie & Kwetiaw',
+    items: [
+      createItem('Mie Goreng Spesial', 56000, 'MG', '/images/Mie Goreng.png'),
+      createItem('Mie Goreng Udang', 56000, 'MG', '/images/Mie Goreng.png'),
+      createItem('Mie Goreng Jawa', 56000, 'MG', '/images/Mie Goreng.png'),
+      createItem('Mie Goreng Seafood', 62000, 'MS', '/images/Mie Goreng.png'),
+      createItem('Mie Kuah Spesial', 56000, 'MK', '/images/MIEKUAHSPESIAL.png'),
+      createItem('Mi Godok', 53000, 'MG', '/images/MIEGODOK.png'),
+      createItem('Indomie Telur Kornet ("Internet")', 45000, 'IT', '/images/INTERNET (2).png'),
+      createItem('Kwetiaw Goreng Spesial', 56000, 'KG', '/images/Kwetiaw Goreng.png'),
+      createItem('Kwetiaw Goreng Seafood', 62000, 'KG', '/images/Kwetiaw Goreng.png'),
+      createItem('Bihun Goreng Spesial', 56000, 'BG', '/images/Bihun Goreng.png'),
+      createItem('Bihun Goreng Seafood', 62000, 'BG', '/images/Bihun Goreng.png'),
+    ],
+  },
+  {
+    id: 'snack',
+    label: 'Snack',
+    items: [
+      createItem('Chicken Nugget', 50000, 'CN', '/images/CHIKENNUGGET.png'),
+      createItem('Chicken Wings', 62000, 'CW', '/images/CHIKENWING.png'),
+      createItem('Kentang Goreng', 50000, 'KG', '/images/KENTANGGORENG.png'),
+      createItem('Sosis Goreng', 62000, 'SG', '/images/SOSISGORENG.png'),
+      createItem('Onion Ring', 44000, 'OR', '/images/onion-ring.jpg'),
+      createItem('Pisang Keju Coklat', 37000, 'PK', '/images/PISANGKEJUCOKLAT.png'),
+      createItem('Snack Kombinasi', 87000, 'SK', '/images/SNACKKOMBINASI.png'),
+      createItem('Cireng', 37000, 'CR', '/images/Cireng.jpg'),
+      createItem('Tempe Mendoan', 44000, 'TM', '/images/Tempe-Mendoan.jpg'),
+      createItem('Tahu Bakso Goreng', 50000, 'TB', '/images/TAHU-BAKSO.jpeg'),
+      createItem('Tahu Cabe Garam', 44000, 'TC', '/images/TAHU-BAKSO.jpeg'),
+      createItem('Telur Dadar', 19000, 'TD', '/images/TELUR-DADAR.jpg'),
+      createItem('Telur Mata Sapi', 19000, 'TM', '/images/TELUR-MATA-SAPI.jpg'),
+      createItem('Paru Goreng Crispy', 83000, 'PC', '/images/PARU.jpg'),
+      createItem('Paru Goreng Pedas', 83000, 'PP', '/images/PARU.jpg'),
+      createItem('Ote-Ote', 50000, 'OO', '/images/OTE-OTE.jpg'),
+      createItem('Pempek', 50000, 'PM', '/images/OTE-OTE.jpg'),
+    ],
+  },
+  {
+    id: 'food',
+    label: 'Food',
+    items: [
+      createItem('Sop Iga Sapi', 154000, 'SI', '/images/SOP-IGA-SAPI.png'),
+      createItem('Ayam Goreng Tepung', 58000, 'AG', '/images/resep-ayam-goreng-krispi-korea_43.jpeg'),
+      createItem('Ayam Goreng Kering', 58000, 'AG', '/images/ayam-goreng-keRING.jpeg'),
+      createItem('Ayam Goreng Mentega', 58000, 'AG', '/images/ayam-saus-mentega.jpg'),
+      createItem('Ayam Asam Manis', 58000, 'AA', '/images/ayam-asam-manis.jpeg'),
+      createItem('Ayam Saos Teriyaki', 58000, 'AT', '/images/ayam-saus-mentega.jpg'),
+      createItem('Ayam Lada Hitam', 58000, 'AL', '/images/ayam-lada-hitam.png'),
+      createItem('Sapi Lada Hitam', 87000, 'SL', '/images/SAPI-LADA-HITAM.png'),
+      createItem('Udang Goreng Tepung', 75000, 'UG', '/images/UDANGGORENGTEPUNG.png'),
+      createItem('Udang Mayonaise', 75000, 'UM', '/images/UDANGGORENGTEPUNG.png'),
+      createItem('Udang Saos Tiram', 75000, 'UT', '/images/UDANG-SAOS-TREYAKI.png'),
+      createItem('Udang Asam Manis', 75000, 'UA', '/images/UDANG-ASAM-MANIS.png'),
+      createItem('Udang Saos Mentega', 75000, 'UM', '/images/UDANG-ASAM-MANIS.png'),
+      createItem('Udang Saos Teriyaki', 75000, 'UT', '/images/UDANG-SAOS-TREYAKI.png'),
+      createItem('Cumi Asam Manis', 68000, 'CA', '/images/CUMI-SAOS-TIRAM.png'),
+      createItem('Cumi Saos Tiram', 68000, 'CT', '/images/cumi-treyaki.png'),
+      createItem('Cumi Goreng Kering', 68000, 'CG', '/images/cumi-treyaki.png'),
+      createItem('Cumi Saos Teriyaki', 68000, 'CT', '/images/cumi-treyaki.png'),
+      createItem('Cumi Saos Mentega', 68000, 'CM', '/images/CUMI-SAOS-TIRAM.png'),
+      createItem('Fu Yung Hai', 56000, 'FY', '/images/fu-yung-hay.jpg'),
+      createItem('Cap Cay Goreng', 56000, 'CC', '/images/CAPCAY.png'),
+      createItem('Cap Cay Kuah', 56000, 'CC', '/images/CAPCAY.png'),
+    ],
+  },
+  {
+    id: 'salad',
+    label: 'Salad & Buah',
+    items: [
+      createItem('Salad Buah', 87000, 'SB', '/images/salad-buah.png'),
+      createItem('Buah Segar', 87000, 'BS', '/images/buah-segar (1).png'),
+      createItem('Buah Segar Spesial', 160000, 'BS', '/images/buah-segar-spesial.png'),
+      createItem('Ice Cream Buah', 56000, 'IC', '/images/escream-buah.png'),
+    ],
+  },
+  {
+    id: 'cancimen',
+    label: 'Cancimen',
+    items: [
+      createItem('Frozz', 25000, 'FR', '/images/frozz.webp'),
+      createItem('Hexos', 17000, 'HX', '/images/hexos.png'),
+      createItem('Chunky Bar', 56000, 'CB', '/images/cb.jpg'),
+      createItem('Cadbury 145gr', 80000, 'CD', '/images/cadburry.jpg'),
+      createItem('SilverQueen', 43000, 'SQ', '/images/sq.jpeg'),
+      createItem('Delfi 125gr', 80000, 'DF', '/images/delfy.webp'),
+      createItem('Kacang Bawang', 37000, 'KB', '/images/KACANGBAWANG.png'),
+      createItem('Pringles', 55000, 'PR', '/images/pringles.jpg'),
+      createItem('Chitato', 32000, 'CH', '/images/Chitato.jpg'),
+      createItem('Qtela', 35000, 'QT', '/images/qtela.jpg'),
+    ],
+  },
+  {
+    id: 'juice',
+    label: 'Jus & Milkshake',
+    items: [
+      createItem('Jus Alpokat', 44000, 'JA', '/images/Jus Alpukat.png'),
+      createItem('Jus Apel', 44000, 'JA', '/images/Jus Apel.png'),
+      createItem('Jus Jeruk', 44000, 'JJ', '/images/Jus Jeruk.png'),
+      createItem('Jus Mangga', 44000, 'JM', '/images/Jus Mangga.png'),
+      createItem('Jus Melon', 44000, 'JM', '/images/Jus Melon.png'),
+      createItem('Jus Semangka', 44000, 'JS', '/images/Jus Semangka.png'),
+      createItem('Jeruk Murni', 44000, 'JM', '/images/Jus Jeruk.png'),
+      createItem('Milk Shake Coklat', 47000, 'MC', '/images/milkshake.png'),
+      createItem('Milk Shake Strawberry', 47000, 'MS', '/images/milkshake.png'),
+      createItem('Milk Shake Vanilla', 47000, 'MV', '/images/milkshake.png'),
+    ],
+  },
+  {
+    id: 'softdrink',
+    label: 'Soft Drink',
+    items: [
+      createItem('Coca-Cola Can', 25000, 'CC', '/images/coca-cola.png'),
+      createItem('Coca-Cola Pitcher', 92000, 'CP', '/images/pitcher.png'),
+      createItem('Fanta Merah Can', 25000, 'FC', '/images/fanta.jpg'),
+      createItem('Fanta Merah Pitcher', 92000, 'FP', '/images/pitcher.png'),
+      createItem('Pokka Green Tea', 32000, 'PG', '/images/pokka-greetea.jpeg'),
+      createItem('Soda Gembira', 44000, 'SG', '/images/soda-gembira.jpg'),
+      createItem('Sprite Can', 25000, 'SC', '/images/sprite.jpg'),
+      createItem('Sprite Pitcher', 92000, 'SP', '/images/pitcher.png'),
+      createItem('Fanta Susu', 37000, 'FS', '/images/soda-gembira.jpg'),
+      createItem('Krating Daeng', 32000, 'KD', '/images/krating-deng.jpg'),
+      createItem('Yakult', 10000, 'YK', '/images/Yakult.jpg'),
+    ],
+  },
+  {
+    id: 'drink',
+    label: 'Drink & Coffee',
+    items: [
+      createItem('Air Mineral', 20000, 'AM', '/images/cleo.png'),
+      createItem('Milo Hot', 37000, 'MH', '/images/hot.png'),
+      createItem('Milo Ice', 37000, 'MI', '/images/dingin.png'),
+      createItem('Es Jeruk Nipis', 44000, 'EN', '/images/dingin.png'),
+      createItem('Teh Hot', 23000, 'TH', '/images/hot.png'),
+      createItem('Es Teh', 23000, 'ET', '/images/dingin.png'),
+      createItem('Jeruk Nipis Hot', 44000, 'JN', '/images/hot.png'),
+      createItem('Lemon Tea Hot', 32000, 'LH', '/images/hot.png'),
+      createItem('Lemon Tea Ice', 32000, 'LI', '/images/dingin.png'),
+      createItem('Lemon Tea Pitcher', 92000, 'LP', '/images/pitcher.png'),
+      createItem('Susu Putih Hot', 32000, 'SH', '/images/hot.png'),
+      createItem('Susu Putih Ice', 32000, 'SI', '/images/dingin.png'),
+      createItem('Susu Coklat Hot', 32000, 'CH', '/images/hot.png'),
+      createItem('Susu Coklat Ice', 32000, 'CI', '/images/dingin.png'),
+      createItem('Teh Pitcher', 92000, 'TP', '/images/pitcher.png'),
+      createItem('Cappuccino', 35000, 'CP', '/images/hot.png'),
+      createItem('Kopi', 30000, 'KP', '/images/hot.png'),
+    ],
+  },
+  {
+    id: 'rokok',
+    label: 'Rokok',
+    items: [
+      createItem('Rokok Veev', 170000, 'RV', '/images/rokok/veev.jpg'),
+      createItem('Avolution', 80000, 'AV', '/images/rokok/avolution.jpg'),
+      createItem('Avolution Menthol', 80000, 'AM', '/images/rokok/avolution.jpg'),
+      createItem('LA Light', 80000, 'LA', '/images/rokok/la-light.jpg'),
+      createItem('LA Light Menthol', 80000, 'LM', '/images/rokok/la-light.jpg'),
+      createItem('Marboro Black Menthol', 80000, 'MB', '/images/rokok/black-menthol.jpg'),
+      createItem('Marboro Light', 80000, 'ML', '/images/rokok/malboro-merah.png'),
+      createItem('Marboro Merah', 80000, 'MM', '/images/rokok/malboro-merah.png'),
+      createItem('Sampoerna A Mild', 80000, 'SA', '/images/rokok/sampoerna-mild.jpg'),
+      createItem('Sampoerna A Mild Menthol', 80000, 'SM', '/images/rokok/samporna-menthol.jpg'),
+      createItem('Marlboro Ice Brust', 80000, 'MI', '/images/rokok/malboro-ice-brust.jpg'),
+      createItem('La Ice', 80000, 'LI', '/images/rokok/la-light.jpg'),
+      createItem('Esse Change Grape', 80000, 'EG', '/images/rokok/esse-change.png'),
+      createItem('Marlboro Filter Black', 80000, 'MF', '/images/rokok/black-menthol.jpg'),
+      createItem('Korek Api Happy Puppy', 23000, 'KA', '/images/rokok/korek.jpeg'),
+    ],
+  },
+];
+
+let filtersMenuHtml = '      <ul class="filters_menu">\n';
+menuCategories.forEach((cat, index) => {
+  let activeClass = index === 0 ? ' class="active"' : '';
+  filtersMenuHtml += '        <li' + activeClass + ' data-filter=".' + cat.id + '">' + cat.label + '</li>\n';
+});
+filtersMenuHtml += '      </ul>\n';
+
+let filtersContentHtml = '      <div class="filters-content">\n        <div class="row grid">\n';
+
+menuCategories.forEach(cat => {
+  cat.items.forEach(item => {
+    const imageUrl = "https://wawazrc.github.io" + item.image;
+    const priceFormatted = new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0,
+    }).format(item.price);
+    
+    filtersContentHtml += '          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all ' + cat.id + '">\n' +
+                          '            <div class="box">\n' +
+                          '              <div>\n' +
+                          '                <div class="img-box">\n' +
+                          '                  <img src="' + imageUrl + '" alt="">\n' +
+                          '                </div>\n' +
+                          '                <div class="detail-box">\n' +
+                          '                  <h5>\n' +
+                          '                    ' + item.name + '\n' +
+                          '                  </h5>\n' +
+                          '                  <p>\n' +
+                          '                    ' + item.description + '\n' +
+                          '                  </p>\n' +
+                          '                  <div class="options">\n' +
+                          '                    <h6>\n' +
+                          '                      ' + priceFormatted + '\n' +
+                          '                    </h6>\n' +
+                          '                    <button type="button" class="btn-add-cart" data-name="' + item.name + '" data-price="' + item.price + '">\n' +
+                          '                      + Add\n' +
+                          '                    </button>\n' +
+                          '                  </div>\n' +
+                          '                </div>\n' +
+                          '              </div>\n' +
+                          '            </div>\n' +
+                          '          </div>\n';
+  });
+});
+filtersContentHtml += '        </div>\n      </div>';
+
+const finalHtml = filtersMenuHtml + "\n" + filtersContentHtml;
+
+let homeMenuHtml = '      <ul class="filters_menu" style="display: none;">\n';
+if (menuCategories.length > 0) {
+  homeMenuHtml += '        <li class="active" data-filter=".' + menuCategories[0].id + '">' + menuCategories[0].label + '</li>\n';
+}
+homeMenuHtml += '      </ul>\n';
+let homeContentHtml = '      <div class="filters-content">\n        <div class="row grid">\n';
+
+// Hanya ambil kategori pertama (Nasi Goreng) untuk Beranda
+if (menuCategories.length > 0) {
+  const cat = menuCategories[0];
+  cat.items.forEach(item => {
+    const imageUrl = "https://wawazrc.github.io" + item.image;
+    const priceFormatted = new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0,
+    }).format(item.price);
+    
+    homeContentHtml += '          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all ' + cat.id + '">\n' +
+                          '            <div class="box">\n' +
+                          '              <div>\n' +
+                          '                <div class="img-box">\n' +
+                          '                  <img src="' + imageUrl + '" alt="">\n' +
+                          '                </div>\n' +
+                          '                <div class="detail-box">\n' +
+                          '                  <h5>\n' +
+                          '                    ' + item.name + '\n' +
+                          '                  </h5>\n' +
+                          '                  <p>\n' +
+                          '                    ' + item.description + '\n' +
+                          '                  </p>\n' +
+                          '                  <div class="options">\n' +
+                          '                    <h6>\n' +
+                          '                      ' + priceFormatted + '\n' +
+                          '                    </h6>\n' +
+                          '                    <button type="button" class="btn-add-cart" data-name="' + item.name + '" data-price="' + item.price + '">\n' +
+                          '                      + Add\n' +
+                          '                    </button>\n' +
+                          '                  </div>\n' +
+                          '                </div>\n' +
+                          '              </div>\n' +
+                          '            </div>\n' +
+                          '          </div>\n';
+  });
+}
+homeContentHtml += '        </div>\n      </div>';
+
+const homeHtml = homeMenuHtml + homeContentHtml;
+
+const indexContent = fs.readFileSync('index.php', 'utf8');
+const newIndexContent = indexContent.replace(/<ul class="filters_menu"[^>]*>[\s\S]*?<div class="btn-box">\s*<a[^>]*>[\s\S]*?<\/a>\s*<\/div>/g, homeHtml + '\n      <div class="btn-box">\n        <a href="menu.html">\n          Lihat Selengkapnya\n        </a>\n      </div>');
+fs.writeFileSync('index.php', newIndexContent);
+
+const menuContent = fs.readFileSync('menu.html', 'utf8');
+const newMenuContent = menuContent.replace(/<ul class="filters_menu"[^>]*>[\s\S]*?<div class="btn-box">\s*<a[^>]*>[\s\S]*?<\/a>\s*<\/div>/g, finalHtml);
+fs.writeFileSync('menu.html', newMenuContent);
+
+console.log("Menu generated and updated successfully in index.php and menu.html");

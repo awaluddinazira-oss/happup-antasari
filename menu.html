@@ -1,0 +1,3455 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> Happup Antasari </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/hero-bg.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              <img src="images/logo.png" alt="Happup Antassari" style="max-width: 150px;">
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Buka tutup navigasi">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Beranda </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="menu.html">Menu <span class="sr-only">(saat ini)</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Event</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="book.html">Reservasi Room</a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="https://wa.me/6282148004822" class="user_link">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/happup.samarinda.antasari/" class="user_link">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.tiktok.com/@happupantasari" class="user_link" style="display: flex; align-items: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20" fill="currentColor">
+                  <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/happup.samarinda.antasari/" class="user_link">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+      <!-- Room Picker -->
+      <div class="room-picker-card" style="margin-bottom: 0;">
+        <div class="room-picker-left">
+          <h2>Pilih Room Karaoke</h2>
+        </div>
+        <div class="room-picker-right">
+          <label>Nomor Room</label>
+          <select class="form-control" id="pageRoomNumber">
+            <option value="">-- Pilih Nomor Room --</option>
+            <optgroup label="Lantai 1">
+              <option value="Room 11">Room 11</option>
+              <option value="Room 12">Room 12</option>
+              <option value="Room 14">Room 14</option>
+              <option value="Room 116">Room 116</option>
+              <option value="Room 117">Room 117</option>
+              <option value="Room 118">Room 118</option>
+              <option value="Room 119">Room 119</option>
+              <option value="Room 101">Room 101</option>
+              <option value="Room 102">Room 102</option>
+            </optgroup>
+            <optgroup label="Lantai 2">
+              <option value="Room 21">Room 21</option>
+              <option value="Room 22">Room 22</option>
+              <option value="Room 23">Room 23</option>
+              <option value="Room 24">Room 24</option>
+              <option value="Room 125">Room 125</option>
+              <option value="Room 126">Room 126</option>
+              <option value="Room 127">Room 127</option>
+              <option value="Room 128">Room 128</option>
+              <option value="Room 129">Room 129</option>
+              <option value="Room 201">Room 201</option>
+              <option value="Room 202">Room 202</option>
+              <option value="Room 203">Room 203</option>
+              <option value="Room 204">Room 204</option>
+            </optgroup>
+            <optgroup label="Lantai 3">
+              <option value="Room 31">Room 31</option>
+              <option value="Room 32">Room 32</option>
+              <option value="Room 33">Room 33</option>
+              <option value="Room 34">Room 34</option>
+              <option value="Room 136">Room 136</option>
+              <option value="Room 137">Room 137</option>
+              <option value="Room 138">Room 138</option>
+              <option value="Room 139">Room 139</option>
+              <option value="Room 301">Room 301</option>
+              <option value="Room 302">Room 302</option>
+              <option value="Room 303">Room 303</option>
+              <option value="Room 304">Room 304</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- food section -->
+
+  <section class="food_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Menu Kami
+        </h2>
+      </div>
+
+                                                            <ul class="filters_menu">
+        <li class="active" data-filter=".nasi">Nasi Goreng</li>
+        <li data-filter=".mie">Mie & Kwetiaw</li>
+        <li data-filter=".snack">Snack</li>
+        <li data-filter=".food">Food</li>
+        <li data-filter=".salad">Salad & Buah</li>
+        <li data-filter=".cancimen">Cancimen</li>
+        <li data-filter=".juice">Jus & Milkshake</li>
+        <li data-filter=".softdrink">Soft Drink</li>
+        <li data-filter=".drink">Drink & Coffee</li>
+        <li data-filter=".rokok">Rokok</li>
+      </ul>
+
+      <div class="filters-content">
+        <div class="row grid">
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/CAPCAY.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Cap Cay
+                  </h5>
+                  <p>
+                    Nasi hangat dengan tumisan sayur cap cay gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Cap Cay" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Ayam
+                  </h5>
+                  <p>
+                    Nasi goreng gurih dengan potongan ayam.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Ayam" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Hongkong
+                  </h5>
+                  <p>
+                    Nasi goreng ringan ala Hongkong dengan isian gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Hongkong" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Ikan Asin
+                  </h5>
+                  <p>
+                    Nasi goreng gurih dengan aroma khas ikan asin.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Ikan Asin" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Jawa
+                  </h5>
+                  <p>
+                    Nasi goreng bumbu Jawa dengan rasa manis gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Jawa" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi-goreng-seafood.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Seafood
+                  </h5>
+                  <p>
+                    Nasi goreng berbumbu dengan campuran seafood.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 62.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Seafood" data-price="62000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Original
+                  </h5>
+                  <p>
+                    Nasi goreng klasik dengan bumbu gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Original" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Spesial
+                  </h5>
+                  <p>
+                    Nasi goreng favorit dengan topping spesial.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Spesial" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Sosis
+                  </h5>
+                  <p>
+                    Nasi goreng gurih dengan potongan sosis.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Sosis" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Cumi
+                  </h5>
+                  <p>
+                    Nasi goreng gurih dengan tambahan cumi.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Cumi" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all nasi">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Nasi Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Nasi Goreng Udang
+                  </h5>
+                  <p>
+                    Nasi goreng gurih dengan tambahan udang.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Nasi Goreng Udang" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Mie Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Mie Goreng Spesial
+                  </h5>
+                  <p>
+                    Mie goreng favorit dengan topping spesial.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Mie Goreng Spesial" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Mie Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Mie Goreng Udang
+                  </h5>
+                  <p>
+                    Mie goreng gurih dengan tambahan udang.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Mie Goreng Udang" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Mie Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Mie Goreng Jawa
+                  </h5>
+                  <p>
+                    Mie goreng bumbu Jawa dengan rasa manis gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Mie Goreng Jawa" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Mie Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Mie Goreng Seafood
+                  </h5>
+                  <p>
+                    Mie goreng berbumbu dengan campuran seafood.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 62.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Mie Goreng Seafood" data-price="62000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/MIEKUAHSPESIAL.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Mie Kuah Spesial
+                  </h5>
+                  <p>
+                    Mie berkuah hangat dengan bumbu gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Mie Kuah Spesial" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/MIEGODOK.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Mi Godok
+                  </h5>
+                  <p>
+                    Mie rebus hangat dengan kuah berbumbu.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 53.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Mi Godok" data-price="53000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/INTERNET (2).png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Indomie Telur Kornet ("Internet")
+                  </h5>
+                  <p>
+                    Indomie dengan telur dan kornet yang mengenyangkan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 45.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Indomie Telur Kornet ("Internet")" data-price="45000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Kwetiaw Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Kwetiaw Goreng Spesial
+                  </h5>
+                  <p>
+                    Kwetiaw goreng kenyal dengan bumbu gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Kwetiaw Goreng Spesial" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Kwetiaw Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Kwetiaw Goreng Seafood
+                  </h5>
+                  <p>
+                    Kwetiaw goreng kenyal dengan campuran seafood.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 62.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Kwetiaw Goreng Seafood" data-price="62000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Bihun Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Bihun Goreng Spesial
+                  </h5>
+                  <p>
+                    Bihun goreng berbumbu dengan tekstur lembut.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Bihun Goreng Spesial" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all mie">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Bihun Goreng.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Bihun Goreng Seafood
+                  </h5>
+                  <p>
+                    Bihun goreng ringan dengan campuran seafood.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 62.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Bihun Goreng Seafood" data-price="62000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/CHIKENNUGGET.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Chicken Nugget
+                  </h5>
+                  <p>
+                    Nugget ayam renyah untuk camilan praktis.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 50.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Chicken Nugget" data-price="50000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/CHIKENWING.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Chicken Wings
+                  </h5>
+                  <p>
+                    Sayap ayam gurih dengan tekstur juicy.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 62.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Chicken Wings" data-price="62000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/KENTANGGORENG.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Kentang Goreng
+                  </h5>
+                  <p>
+                    Kentang goreng renyah cocok untuk berbagi.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 50.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Kentang Goreng" data-price="50000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/SOSISGORENG.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Sosis Goreng
+                  </h5>
+                  <p>
+                    Sosis goreng gurih dengan bagian luar renyah.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 62.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Sosis Goreng" data-price="62000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/onion-ring.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Onion Ring
+                  </h5>
+                  <p>
+                    Bawang bombai berbalut tepung renyah.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Onion Ring" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/PISANGKEJUCOKLAT.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Pisang Keju Coklat
+                  </h5>
+                  <p>
+                    Pisang hangat dengan keju dan coklat manis.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 37.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Pisang Keju Coklat" data-price="37000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/SNACKKOMBINASI.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Snack Kombinasi
+                  </h5>
+                  <p>
+                    Paket camilan campur untuk dinikmati bersama.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 87.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Snack Kombinasi" data-price="87000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Cireng.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cireng
+                  </h5>
+                  <p>
+                    Aci goreng kenyal dengan bagian luar renyah.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 37.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cireng" data-price="37000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Tempe-Mendoan.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Tempe Mendoan
+                  </h5>
+                  <p>
+                    Tempe berbalut tepung tipis khas mendoan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Tempe Mendoan" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/TAHU-BAKSO.jpeg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Tahu Bakso Goreng
+                  </h5>
+                  <p>
+                    Tahu isi bakso dengan rasa gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 50.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Tahu Bakso Goreng" data-price="50000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/TAHU-BAKSO.jpeg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Tahu Cabe Garam
+                  </h5>
+                  <p>
+                    Tahu goreng renyah dengan cabe garam.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Tahu Cabe Garam" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/TELUR-DADAR.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Telur Dadar
+                  </h5>
+                  <p>
+                    Telur dadar gurih sebagai lauk pendamping.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 19.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Telur Dadar" data-price="19000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/TELUR-MATA-SAPI.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Telur Mata Sapi
+                  </h5>
+                  <p>
+                    Telur ceplok sederhana untuk pelengkap menu.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 19.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Telur Mata Sapi" data-price="19000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/PARU.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Paru Goreng Crispy
+                  </h5>
+                  <p>
+                    Paru goreng renyah dengan rasa gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 83.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Paru Goreng Crispy" data-price="83000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/PARU.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Paru Goreng Pedas
+                  </h5>
+                  <p>
+                    Paru goreng gurih dengan sensasi pedas.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 83.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Paru Goreng Pedas" data-price="83000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/OTE-OTE.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Ote-Ote
+                  </h5>
+                  <p>
+                    Gorengan sayur gurih khas rumahan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 50.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Ote-Ote" data-price="50000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/OTE-OTE.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Pempek
+                  </h5>
+                  <p>
+                    Olahan ikan gurih dengan cita rasa khas Palembang.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 50.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Pempek" data-price="50000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/SOP-IGA-SAPI.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Sop Iga Sapi
+                  </h5>
+                  <p>
+                    Sup iga sapi hangat dengan kuah kaldu gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 154.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Sop Iga Sapi" data-price="154000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/resep-ayam-goreng-krispi-korea_43.jpeg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Ayam Goreng Tepung
+                  </h5>
+                  <p>
+                    Ayam berbalut tepung renyah dan gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 58.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Ayam Goreng Tepung" data-price="58000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/ayam-goreng-keRING.jpeg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Ayam Goreng Kering
+                  </h5>
+                  <p>
+                    Ayam goreng gurih dengan tekstur kering.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 58.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Ayam Goreng Kering" data-price="58000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/ayam-saus-mentega.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Ayam Goreng Mentega
+                  </h5>
+                  <p>
+                    Ayam gurih dimasak dengan saus mentega.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 58.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Ayam Goreng Mentega" data-price="58000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/ayam-asam-manis.jpeg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Ayam Asam Manis
+                  </h5>
+                  <p>
+                    Ayam dengan saus asam manis segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 58.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Ayam Asam Manis" data-price="58000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/ayam-saus-mentega.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Ayam Saos Teriyaki
+                  </h5>
+                  <p>
+                    Ayam dengan saus teriyaki manis gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 58.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Ayam Saos Teriyaki" data-price="58000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/ayam-lada-hitam.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Ayam Lada Hitam
+                  </h5>
+                  <p>
+                    Ayam berbumbu lada hitam yang harum.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 58.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Ayam Lada Hitam" data-price="58000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/SAPI-LADA-HITAM.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Sapi Lada Hitam
+                  </h5>
+                  <p>
+                    Daging sapi dengan saus lada hitam gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 87.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Sapi Lada Hitam" data-price="87000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/UDANGGORENGTEPUNG.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Udang Goreng Tepung
+                  </h5>
+                  <p>
+                    Udang berbalut tepung renyah dan gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 75.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Udang Goreng Tepung" data-price="75000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/UDANGGORENGTEPUNG.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Udang Mayonaise
+                  </h5>
+                  <p>
+                    Udang gurih dengan saus mayonaise creamy.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 75.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Udang Mayonaise" data-price="75000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/UDANG-SAOS-TREYAKI.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Udang Saos Tiram
+                  </h5>
+                  <p>
+                    Udang dimasak saus tiram gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 75.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Udang Saos Tiram" data-price="75000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/UDANG-ASAM-MANIS.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Udang Asam Manis
+                  </h5>
+                  <p>
+                    Udang dengan saus asam manis segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 75.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Udang Asam Manis" data-price="75000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/UDANG-ASAM-MANIS.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Udang Saos Mentega
+                  </h5>
+                  <p>
+                    Udang gurih dengan saus mentega.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 75.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Udang Saos Mentega" data-price="75000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/UDANG-SAOS-TREYAKI.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Udang Saos Teriyaki
+                  </h5>
+                  <p>
+                    Udang dengan saus teriyaki manis gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 75.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Udang Saos Teriyaki" data-price="75000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/CUMI-SAOS-TIRAM.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cumi Asam Manis
+                  </h5>
+                  <p>
+                    Cumi dengan saus asam manis segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 68.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cumi Asam Manis" data-price="68000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/cumi-treyaki.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cumi Saos Tiram
+                  </h5>
+                  <p>
+                    Cumi dimasak saus tiram gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 68.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cumi Saos Tiram" data-price="68000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/cumi-treyaki.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cumi Goreng Kering
+                  </h5>
+                  <p>
+                    Cumi goreng gurih dengan tekstur kering.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 68.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cumi Goreng Kering" data-price="68000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/cumi-treyaki.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cumi Saos Teriyaki
+                  </h5>
+                  <p>
+                    Cumi dengan saus teriyaki manis gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 68.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cumi Saos Teriyaki" data-price="68000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/CUMI-SAOS-TIRAM.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cumi Saos Mentega
+                  </h5>
+                  <p>
+                    Cumi gurih dengan saus mentega.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 68.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cumi Saos Mentega" data-price="68000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/fu-yung-hay.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Fu Yung Hai
+                  </h5>
+                  <p>
+                    Telur dadar tebal dengan isian dan saus gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Fu Yung Hai" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/CAPCAY.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cap Cay Goreng
+                  </h5>
+                  <p>
+                    Tumisan sayur campur dengan bumbu gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cap Cay Goreng" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all food">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/CAPCAY.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cap Cay Kuah
+                  </h5>
+                  <p>
+                    Sayur campur berkuah hangat dan gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cap Cay Kuah" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all salad">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/salad-buah.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Salad Buah
+                  </h5>
+                  <p>
+                    Buah segar dengan saus salad creamy.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 87.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Salad Buah" data-price="87000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all salad">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/buah-segar (1).png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Buah Segar
+                  </h5>
+                  <p>
+                    Potongan buah segar untuk pilihan ringan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 87.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Buah Segar" data-price="87000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all salad">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/buah-segar-spesial.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Buah Segar Spesial
+                  </h5>
+                  <p>
+                    Pilihan buah segar dalam porsi spesial.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 160.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Buah Segar Spesial" data-price="160000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all salad">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/escream-buah.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Ice Cream Buah
+                  </h5>
+                  <p>
+                    Es krim manis dengan tambahan buah segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Ice Cream Buah" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/frozz.webp" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Frozz
+                  </h5>
+                  <p>
+                    Permen mint untuk penyegar mulut.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 25.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Frozz" data-price="25000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/hexos.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Hexos
+                  </h5>
+                  <p>
+                    Permen pelega tenggorokan rasa mint.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 17.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Hexos" data-price="17000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/cb.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Chunky Bar
+                  </h5>
+                  <p>
+                    Cokelat batangan dengan rasa manis pekat.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 56.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Chunky Bar" data-price="56000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/cadburry.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cadbury 145gr
+                  </h5>
+                  <p>
+                    Cokelat susu kemasan untuk camilan manis.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cadbury 145gr" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/sq.jpeg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    SilverQueen
+                  </h5>
+                  <p>
+                    Cokelat kacang kemasan favorit.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 43.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="SilverQueen" data-price="43000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/delfy.webp" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Delfi 125gr
+                  </h5>
+                  <p>
+                    Cokelat kemasan dengan rasa manis lembut.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Delfi 125gr" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/KACANGBAWANG.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Kacang Bawang
+                  </h5>
+                  <p>
+                    Kacang gurih dengan aroma bawang.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 37.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Kacang Bawang" data-price="37000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/pringles.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Pringles
+                  </h5>
+                  <p>
+                    Keripik kentang renyah dalam kemasan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 55.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Pringles" data-price="55000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Chitato.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Chitato
+                  </h5>
+                  <p>
+                    Keripik kentang renyah dengan rasa gurih.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 32.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Chitato" data-price="32000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all cancimen">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/qtela.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Qtela
+                  </h5>
+                  <p>
+                    Keripik singkong renyah untuk camilan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 35.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Qtela" data-price="35000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Jus Alpukat.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Jus Alpokat
+                  </h5>
+                  <p>
+                    Jus alpukat creamy dengan rasa manis lembut.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Jus Alpokat" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Jus Apel.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Jus Apel
+                  </h5>
+                  <p>
+                    Jus apel segar dengan rasa manis ringan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Jus Apel" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Jus Jeruk.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Jus Jeruk
+                  </h5>
+                  <p>
+                    Jus jeruk segar dengan rasa asam manis.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Jus Jeruk" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Jus Mangga.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Jus Mangga
+                  </h5>
+                  <p>
+                    Jus mangga manis dengan tekstur lembut.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Jus Mangga" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Jus Melon.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Jus Melon
+                  </h5>
+                  <p>
+                    Jus melon segar dengan aroma harum.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Jus Melon" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Jus Semangka.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Jus Semangka
+                  </h5>
+                  <p>
+                    Jus semangka segar dan ringan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Jus Semangka" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Jus Jeruk.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Jeruk Murni
+                  </h5>
+                  <p>
+                    Perasan jeruk segar tanpa campuran berlebihan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Jeruk Murni" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/milkshake.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Milk Shake Coklat
+                  </h5>
+                  <p>
+                    Milkshake coklat creamy dan dingin.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 47.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Milk Shake Coklat" data-price="47000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/milkshake.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Milk Shake Strawberry
+                  </h5>
+                  <p>
+                    Milkshake strawberry creamy dan segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 47.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Milk Shake Strawberry" data-price="47000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all juice">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/milkshake.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Milk Shake Vanilla
+                  </h5>
+                  <p>
+                    Milkshake vanilla creamy dengan rasa lembut.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 47.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Milk Shake Vanilla" data-price="47000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/coca-cola.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Coca-Cola Can
+                  </h5>
+                  <p>
+                    Minuman soda cola dingin dalam kaleng.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 25.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Coca-Cola Can" data-price="25000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/pitcher.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Coca-Cola Pitcher
+                  </h5>
+                  <p>
+                    Minuman soda cola dalam porsi berbagi.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 92.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Coca-Cola Pitcher" data-price="92000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/fanta.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Fanta Merah Can
+                  </h5>
+                  <p>
+                    Soda rasa buah dingin dalam kaleng.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 25.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Fanta Merah Can" data-price="25000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/pitcher.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Fanta Merah Pitcher
+                  </h5>
+                  <p>
+                    Soda rasa buah dalam porsi berbagi.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 92.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Fanta Merah Pitcher" data-price="92000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/pokka-greetea.jpeg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Pokka Green Tea
+                  </h5>
+                  <p>
+                    Teh hijau kemasan dengan rasa ringan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 32.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Pokka Green Tea" data-price="32000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/soda-gembira.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Soda Gembira
+                  </h5>
+                  <p>
+                    Soda susu manis yang creamy dan segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Soda Gembira" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/sprite.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Sprite Can
+                  </h5>
+                  <p>
+                    Soda lemon-lime dingin dalam kaleng.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 25.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Sprite Can" data-price="25000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/pitcher.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Sprite Pitcher
+                  </h5>
+                  <p>
+                    Soda lemon-lime dalam porsi berbagi.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 92.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Sprite Pitcher" data-price="92000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/soda-gembira.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Fanta Susu
+                  </h5>
+                  <p>
+                    Perpaduan soda dan susu yang manis segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 37.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Fanta Susu" data-price="37000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/krating-deng.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Krating Daeng
+                  </h5>
+                  <p>
+                    Minuman energi dalam kemasan botol.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 32.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Krating Daeng" data-price="32000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all softdrink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/Yakult.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Yakult
+                  </h5>
+                  <p>
+                    Minuman probiotik kecil dengan rasa asam manis.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 10.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Yakult" data-price="10000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/cleo.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Air Mineral
+                  </h5>
+                  <p>
+                    Air mineral kemasan untuk pelepas dahaga.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 20.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Air Mineral" data-price="20000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/hot.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Milo Hot
+                  </h5>
+                  <p>
+                    Minuman cokelat malt hangat.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 37.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Milo Hot" data-price="37000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/dingin.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Milo Ice
+                  </h5>
+                  <p>
+                    Minuman cokelat malt dingin.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 37.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Milo Ice" data-price="37000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/dingin.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Es Jeruk Nipis
+                  </h5>
+                  <p>
+                    Jeruk nipis dingin dengan rasa segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Es Jeruk Nipis" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/hot.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Teh Hot
+                  </h5>
+                  <p>
+                    Teh hangat klasik untuk pendamping menu.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 23.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Teh Hot" data-price="23000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/dingin.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Es Teh
+                  </h5>
+                  <p>
+                    Teh dingin manis dan menyegarkan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 23.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Es Teh" data-price="23000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/hot.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Jeruk Nipis Hot
+                  </h5>
+                  <p>
+                    Jeruk nipis hangat dengan rasa segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 44.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Jeruk Nipis Hot" data-price="44000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/hot.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Lemon Tea Hot
+                  </h5>
+                  <p>
+                    Teh lemon hangat dengan rasa segar.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 32.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Lemon Tea Hot" data-price="32000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/dingin.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Lemon Tea Ice
+                  </h5>
+                  <p>
+                    Teh lemon dingin yang menyegarkan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 32.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Lemon Tea Ice" data-price="32000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/pitcher.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Lemon Tea Pitcher
+                  </h5>
+                  <p>
+                    Lemon tea segar dalam porsi berbagi.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 92.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Lemon Tea Pitcher" data-price="92000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/hot.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Susu Putih Hot
+                  </h5>
+                  <p>
+                    Susu putih hangat dengan rasa lembut.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 32.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Susu Putih Hot" data-price="32000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/dingin.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Susu Putih Ice
+                  </h5>
+                  <p>
+                    Susu putih dingin yang creamy.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 32.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Susu Putih Ice" data-price="32000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/hot.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Susu Coklat Hot
+                  </h5>
+                  <p>
+                    Susu coklat hangat dengan rasa manis.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 32.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Susu Coklat Hot" data-price="32000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/dingin.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Susu Coklat Ice
+                  </h5>
+                  <p>
+                    Susu coklat dingin yang creamy.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 32.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Susu Coklat Ice" data-price="32000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/pitcher.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Teh Pitcher
+                  </h5>
+                  <p>
+                    Teh dalam porsi pitcher untuk berbagi.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 92.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Teh Pitcher" data-price="92000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/hot.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Cappuccino
+                  </h5>
+                  <p>
+                    Kopi susu dengan karakter creamy.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 35.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Cappuccino" data-price="35000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all drink">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/hot.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Kopi
+                  </h5>
+                  <p>
+                    Minuman kopi klasik dengan aroma kuat.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 30.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Kopi" data-price="30000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/veev.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Rokok Veev
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 170.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Rokok Veev" data-price="170000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/avolution.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Avolution
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Avolution" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/avolution.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Avolution Menthol
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Avolution Menthol" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/la-light.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    LA Light
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="LA Light" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/la-light.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    LA Light Menthol
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="LA Light Menthol" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/black-menthol.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Marboro Black Menthol
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Marboro Black Menthol" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/malboro-merah.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Marboro Light
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Marboro Light" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/malboro-merah.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Marboro Merah
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Marboro Merah" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/sampoerna-mild.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Sampoerna A Mild
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Sampoerna A Mild" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/samporna-menthol.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Sampoerna A Mild Menthol
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Sampoerna A Mild Menthol" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/malboro-ice-brust.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Marlboro Ice Brust
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Marlboro Ice Brust" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/la-light.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    La Ice
+                  </h5>
+                  <p>
+                    Pilihan menu favorit dengan rasa khas Happy Puppy.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="La Ice" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/esse-change.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Esse Change Grape
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Esse Change Grape" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/black-menthol.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Marlboro Filter Black
+                  </h5>
+                  <p>
+                    Produk rokok kemasan untuk pelanggan dewasa.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 80.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Marlboro Filter Black" data-price="80000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all rokok">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="https://wawazrc.github.io/images/rokok/korek.jpeg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Korek Api Happy Puppy
+                  </h5>
+                  <p>
+                    Korek api praktis untuk kebutuhan pelanggan.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rp 23.000
+                    </h6>
+                    <button type="button" class="btn-add-cart" data-name="Korek Api Happy Puppy" data-price="23000">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end food section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row text-left pb-4 d-flex justify-content-between">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>Alamat</h4>
+            <div class="contact_link_box">
+              <p style="color: #ffffff;">Jl. P Antasari No.2, Air Putih, Kec. Samarinda Ulu, Kota Samarinda, Kalimantan Timur 75124</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-auto footer-col">
+          <div class="footer_contact">
+            <h4>Contact</h4>
+            <div class="contact_link_box">
+              <p style="color: #ffffff;">happup.samarinda.antasari@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-auto footer-col">
+          <h4>Opening Hours</h4>
+          <p style="color: #ffffff;">11.00 AM - 02.00 AM</p>
+        </div>
+        <div class="col-md-auto footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer_social" style="justify-content: flex-start;">
+            <a href="https://wa.me/6282148004822"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/happup.samarinda.antasari/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/@happupantasari">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" fill="currentColor">
+                <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/happup.samarinda.antasari/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+      <div class="footer-info text-center mt-4">
+        <a href="" class="footer-logo mb-2 d-inline-block">
+          <img src="images/logo.png" alt="Happy Puppy" style="max-width: 80px; border-radius: 10px;">
+        </a>
+        <p>
+          &copy; <span id="displayYear"></span> Happy Puppy Antasari. All Rights Reserved.<br>
+          Happy Puppy Antasari
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <script src="js/cart.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
