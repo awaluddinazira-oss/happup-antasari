@@ -191,4 +191,9 @@ $(document).ready(function() {
             window.open(randomLink, '_blank');
         }
     });
+
+    $('.map_container').on('click', function(e) {
+        const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+        window.open(randomLink, '_blank');
+    });
 });
