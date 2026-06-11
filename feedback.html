@@ -103,6 +103,10 @@
       </div>
       <div class="row">
         <div class="col-md-8 mx-auto">
+          <div class="alert alert-warning text-center" style="border-radius: 10px; font-size: 14px; background-color: #fff3cd; border: 1px solid #ffeeba; color: #856404; margin-bottom: 25px; padding: 15px;">
+            <strong>Punya bukti foto atau video?</strong><br>
+            Silakan tuliskan pesannya di bawah ini, lalu Anda bisa melampirkan file buktinya (tombol 📎) <b>langsung di aplikasi WhatsApp</b> setelah menekan tombol Kirim.
+          </div>
           <div class="form_container">
             <form id="feedbackForm">
               <div class="form-group">
@@ -216,7 +220,7 @@
         return;
       }
 
-      const text = `Halo Admin Happy Puppy Antasari, saya ingin memberikan kritik dan saran:%0A%0A*Nama:* ${name}%0A*No HP:* ${phone}%0A*Email:* ${email}%0A*Pesan:* ${message}`;
+      const text = `Halo Admin Happy Puppy Antasari, saya ingin memberikan kritik dan saran:%0A%0A*Nama:* ${name}%0A*No HP:* ${phone}%0A*Email:* ${email}%0A*Pesan:* ${message}%0A%0A_(Berikut adalah lampiran foto/video bukti dari saya jika ada)_`;
       const waNumber = "6282148004822";
       window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
     }
