@@ -145,7 +145,7 @@
                 </select>
               </div>
               <div>
-                <input type="date" id="bookDate" class="form-control">
+                <input type="text" id="bookDate" class="form-control" placeholder="Pilih Tanggal" onfocus="this.type='date'" onblur="if(this.value==''){this.type='text'}">
               </div>
               <div>
                 <select id="bookTime" class="form-control nice-select wide">
