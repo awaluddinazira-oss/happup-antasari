@@ -1,12 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;500;600;700&display=swap");
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
   background-color: #ffffff;
   overflow-x: hidden;
+  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.book_section, .about_section, .contact_section, .food_section {
+  flex: 1 0 auto;
 }
 
 .layout_padding {
