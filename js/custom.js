@@ -86,7 +86,7 @@ function submitReservation(event) {
         return;
     }
 
-    const message = `Halo, saya ingin melakukan reservasi:\nNama: ${name}\nNo. Telp: ${phone}\nPaket: ${pkg}\nRoom: ${room}\nTanggal: ${date}\nJam: ${time}`;
+    const message = `Halo, saya ingin melakukan reservasi:\nNama: ${name}\nNo. Telp: ${phone}\nPaket: ${pkg}\nRoom: ${room}\nTanggal: ${date}\nJam: ${time}\n\nTerima kasih 😊`;
     const encodedMessage = encodeURIComponent(message);
     window.location.href = `https://wa.me/6282148004822?text=${encodedMessage}`;
 }
@@ -105,7 +105,7 @@ function submitReservationHome(event) {
         return;
     }
 
-    const message = `Halo, saya ingin melakukan reservasi:\nNama: ${name}\nNo. Telp: ${phone}\nPaket: ${pkg}\nRoom: ${room}\nTanggal: ${date}\nJam: ${time}`;
+    const message = `Halo, saya ingin melakukan reservasi:\nNama: ${name}\nNo. Telp: ${phone}\nPaket: ${pkg}\nRoom: ${room}\nTanggal: ${date}\nJam: ${time}\n\nTerima kasih 😊`;
     const encodedMessage = encodeURIComponent(message);
     window.location.href = `https://wa.me/6282148004822?text=${encodedMessage}`;
 }
