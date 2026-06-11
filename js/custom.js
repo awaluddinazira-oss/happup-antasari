@@ -209,3 +209,46 @@ $(document).ready(function() {
         }
     });
 });
+
+// Inject AOS CSS and JS for Premium Animation
+(function() {
+  var aosCss = document.createElement('link');
+  aosCss.rel = 'stylesheet';
+  aosCss.href = 'https://unpkg.com/aos@2.3.1/dist/aos.css';
+  document.head.appendChild(aosCss);
+
+  var aosJs = document.createElement('script');
+  aosJs.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+  aosJs.onload = function() {
+    document.querySelectorAll('.heading_container').forEach(el => el.setAttribute('data-aos', 'fade-down'));
+    document.querySelectorAll('.offer_section .box').forEach((el, index) => {
+      el.setAttribute('data-aos', 'fade-up');
+      el.setAttribute('data-aos-delay', (index * 150).toString());
+    });
+    document.querySelectorAll('.food_section .box').forEach((el, index) => {
+      el.setAttribute('data-aos', 'zoom-in');
+      el.setAttribute('data-aos-delay', ((index % 3) * 150).toString());
+    });
+    document.querySelectorAll('.about_section .img-box').forEach(el => el.setAttribute('data-aos', 'fade-right'));
+    document.querySelectorAll('.about_section .detail-box').forEach(el => el.setAttribute('data-aos', 'fade-left'));
+    document.querySelectorAll('.book_section .form_container').forEach(el => el.setAttribute('data-aos', 'fade-up'));
+    document.querySelectorAll('.book_section .map_container').forEach(el => el.setAttribute('data-aos', 'zoom-in'));
+    document.querySelectorAll('.client_section .box').forEach(el => el.setAttribute('data-aos', 'zoom-in-up'));
+    document.querySelectorAll('.footer_section .footer-col').forEach((el, index) => {
+      el.setAttribute('data-aos', 'fade-up');
+      el.setAttribute('data-aos-delay', (index * 100).toString());
+    });
+    document.querySelectorAll('.event_section .img-box, .price_section .img-box').forEach((el, index) => {
+      el.setAttribute('data-aos', 'zoom-in-up');
+      el.setAttribute('data-aos-delay', ((index % 3) * 150).toString());
+    });
+    document.querySelectorAll('.contact_section .form_container').forEach(el => el.setAttribute('data-aos', 'fade-up'));
+
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 50
+    });
+  };
+  document.body.appendChild(aosJs);
+})();
