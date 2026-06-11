@@ -60,14 +60,14 @@
               <li class="nav-item">
                 <a class="nav-link" href="menu.html">Menu</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="about.html">Event <span class="sr-only">(saat ini)</span> </a>
+              <li class="nav-item ">
+                <a class="nav-link" href="about.html">Event </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="book.html">Reservasi Room</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="feedback.html">Kritik & Saran</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="feedback.html">Kritik & Saran <span class="sr-only">(saat ini)</span> </a>
               </li>
             </ul>
             <div class="user_option">
@@ -93,87 +93,42 @@
     <!-- end header section -->
   </div>
 
-  <!-- about section -->
-
-  <section class="about_section layout_padding">
-    <div class="container  ">
-
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Kritik dan Saran
+        </h2>
+      </div>
       <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/abaut-img.jpg" alt="About" style="border-radius: 15px; width: 100%;">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                🎤 Sing, Chill & Enjoy at Happup Antasari
-              </h2>
-            </div>
-            <p>
-              Nikmati pengalaman karaoke modern dengan room nyaman, sound berkualitas, pilihan makanan & minuman favorit, serta promo menarik setiap hari. Tempat terbaik untuk bersantai, berkumpul, dan menciptakan momen seru bersama orang terdekat.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-  <!-- price section -->
-  <section class="price_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Harga Room
-        </h2>
-      </div>
-      <div class="row mt-5">
-        <div class="col-md-6 mb-4">
-          <div class="img-box text-center">
-            <img src="images/Happy-hour.jpeg" alt="Happy Hour" class="img-fluid shadow-lg" style="border-radius: 15px; width: 100%;">
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="img-box text-center">
-            <img src="images/harga-room.jpeg" alt="Harga Room" class="img-fluid shadow-lg" style="border-radius: 15px; width: 100%;">
+        <div class="col-md-8 mx-auto">
+          <div class="form_container">
+            <form id="feedbackForm">
+              <div class="form-group">
+                <input type="text" id="feedbackName" placeholder="Nama Lengkap" />
+              </div>
+              <div class="form-group">
+                <input type="text" id="feedbackPhone" placeholder="Nomor Telepon / WhatsApp" />
+              </div>
+              <div class="form-group">
+                <input type="email" id="feedbackEmail" placeholder="Email Anda" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="message-box" id="feedbackMessage" placeholder="Tuliskan kritik dan saran Anda di sini..." />
+              </div>
+              <div class="btn-box">
+                <button type="button" onclick="sendFeedback()">
+                  Kirim Saran
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- end price section -->
-
-  <!-- event section -->
-  <section class="event_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Promo Spesial
-        </h2>
-      </div>
-      <div class="row mt-5">
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="img-box text-center">
-            <img src="images/Paket-nyantui.png" alt="Paket Nyantui" class="img-fluid shadow-lg" style="border-radius: 15px; width: 100%; max-width: 500px;">
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="img-box text-center">
-            <img src="images/Paket-hepimode-game.png" alt="Paket Hepi Mode Game" class="img-fluid shadow-lg" style="border-radius: 15px; width: 100%; max-width: 500px;">
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="img-box text-center">
-            <img src="images/Paket-nyambar.png?v=2" alt="Paket Nyambar" class="img-fluid shadow-lg" style="border-radius: 15px; width: 100%; max-width: 500px;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end event section -->
+  <!-- end contact section -->
 
   <!-- footer section -->
   <footer class="footer_section">
@@ -249,6 +204,23 @@
   <script src="js/custom.js"></script>
   <!-- Google Map Removed -->
 
+  <script>
+    function sendFeedback() {
+      const name = document.getElementById('feedbackName').value;
+      const phone = document.getElementById('feedbackPhone').value;
+      const email = document.getElementById('feedbackEmail').value;
+      const message = document.getElementById('feedbackMessage').value;
+
+      if (!name || !message) {
+        alert("Mohon isi Nama Lengkap dan Pesan terlebih dahulu.");
+        return;
+      }
+
+      const text = `Halo Admin Happy Puppy Antasari, saya ingin memberikan kritik dan saran:%0A%0A*Nama:* ${name}%0A*No HP:* ${phone}%0A*Email:* ${email}%0A*Pesan:* ${message}`;
+      const waNumber = "6282148004822";
+      window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
+    }
+  </script>
 </body>
 
 </html>
