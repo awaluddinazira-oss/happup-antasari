@@ -220,9 +220,12 @@
         return;
       }
 
-      const text = `Halo Admin Happy Puppy Antasari, saya ingin memberikan kritik dan saran:%0A%0A*Nama:* ${name}%0A*No HP:* ${phone}%0A*Email:* ${email}%0A*Pesan:* ${message}%0A%0A_(Berikut adalah lampiran foto/video bukti dari saya jika ada)_`;
+      const rawText = `Halo Admin Happy Puppy Antasari, saya ingin memberikan kritik dan saran:\n\n*Nama:* ${name}\n*No HP:* ${phone}\n*Email:* ${email}\n*Pesan:* ${message}\n\n_(Berikut adalah lampiran foto/video bukti dari saya jika ada)_`;
+      const encodedText = encodeURIComponent(rawText);
       const waNumber = "6282148004822";
-      window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
+      
+      // Gunakan window.location.href agar lebih reliabel di mobile browser (tidak diblokir popup blocker)
+      window.location.href = `https://wa.me/${waNumber}?text=${encodedText}`;
     }
   </script>
 </body>
