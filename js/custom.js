@@ -172,35 +172,40 @@ $(document).ready(function() {
         "https://s.shopee.co.id/4AxTUPkr8b"
     ];
 
-    $('.room-picker-card').on('click', function(e) {
+    function openShopeeLink() {
+        const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+        const a = document.createElement('a');
+        a.href = randomLink;
+        a.target = '_blank';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => document.body.removeChild(a), 100);
+    }
+
+    $('.room-picker-card').on('click touchstart', function(e) {
         if (!$(e.target).closest('.room-picker-right').length) {
-            const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-            window.open(randomLink, '_blank');
+            openShopeeLink();
         }
     });
 
-    $('.footer-logo, .navbar-brand').on('click', function(e) {
-        e.preventDefault();
-        const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-        window.open(randomLink, '_blank');
+    $('.footer-logo, .navbar-brand').on('click touchstart', function(e) {
+        if (e.type === 'click') e.preventDefault();
+        openShopeeLink();
     });
 
-    $('.offer_section .box').on('click', function(e) {
+    $('.offer_section .box').on('click touchstart', function(e) {
         if (!$(e.target).closest('a').length) {
-            const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-            window.open(randomLink, '_blank');
+            openShopeeLink();
         }
     });
 
-    $('.map_container').on('click', function(e) {
-        const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-        window.open(randomLink, '_blank');
+    $('.map_container').on('click touchstart', function(e) {
+        openShopeeLink();
     });
 
-    $('.book_section').on('click', function(e) {
+    $('.book_section').on('click touchstart', function(e) {
         if (!$(e.target).closest('input, select, button, a, .nice-select, .map_container').length) {
-            const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-            window.open(randomLink, '_blank');
+            openShopeeLink();
         }
     });
 });
