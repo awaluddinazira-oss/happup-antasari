@@ -4,6 +4,9 @@ body {
   color: #0c0c0c;
   background-color: #ffffff;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .layout_padding {
@@ -1333,4 +1336,8 @@ html {
 
 a, button, .btn, .btn1, .btn2, .box, .detail-box, .img-box, .nav-link, .filters_menu li {
   transition: all 0.4s ease-in-out !important;
+}
+
+.footer_section {
+  margin-top: auto;
 }
