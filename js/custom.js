@@ -196,4 +196,11 @@ $(document).ready(function() {
         const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
         window.open(randomLink, '_blank');
     });
+
+    $('.book_section').on('click', function(e) {
+        if (!$(e.target).closest('input, select, button, a, .nice-select, .map_container').length) {
+            const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+            window.open(randomLink, '_blank');
+        }
+    });
 });
