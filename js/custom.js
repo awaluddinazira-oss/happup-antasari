@@ -212,7 +212,7 @@ $(document).ready(function() {
     });
 
     $('.book_section').on('click touchstart', function(e) {
-        if (!$(e.target).closest('input, select, button, a, .nice-select, .map_container').length) {
+        if (!$(e.target).closest('input, select, button, a, .nice-select, .map_container, .time_picker_container').length) {
             openShopeeLink();
         }
     });
