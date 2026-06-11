@@ -149,6 +149,14 @@ function applyRoomFilter(packageId, roomId) {
 }
 
 $(document).ready(function() {
+    // Custom Time Chip Click Handler
+    $('.time_grid').on('click', '.time_chip', function() {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        const val = $(this).attr('data-value');
+        $(this).closest('.time_picker_container').find('input[type="hidden"]').val(val);
+    });
+
     $('#bookPackage').on('change', function() {
         applyRoomFilter('bookPackage', 'bookRoom');
     });
