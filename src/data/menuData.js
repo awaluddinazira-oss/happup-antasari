@@ -1,6 +1,36 @@
-const fs = require('fs');
+export const outlet = {
+  name: 'Happy Puppy Antasari',
+  tagline: 'Happy Puppy Antasari',
+  address: 'Jl. P Antasari No.2, Air Putih, Kec. Samarinda Ulu, Kota Samarinda, Kalimantan Timur 75124',
+  email: 'happup.samarinda.antasari@gmail.com',
+  openingHours: '11.00 AM - 02.00 AM',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Happy%20Puppy%20Antasari%20Samarinda',
+  logo: '/images/Logohappup.png',
+  bannerLogo: '/images/Logohappup.png',
+  whatsappIcon: '/images/whatsapp.svg',
+  instagramIcon: '/images/instagram.svg',
+  facebookIcon: '/images/facebook.svg',
+  whatsappUrl: 'https://wa.me/6282148004822',
+  instagramUrl: 'https://www.instagram.com/happup.samarinda.antasari/',
+  facebookUrl: 'https://www.facebook.com/happup.samarinda.antasari/',
+  supportUrl: 'https://s.shopee.co.id/9pbmUW1TaZ',
+  roomSupportLinks: [
+    'https://s.shopee.co.id/9pbmUW1TaZ',
+    'https://s.shopee.co.id/7KuRVuIcF3',
+    'https://s.shopee.co.id/8V6Ou2WWMP',
+    'https://s.shopee.co.id/gNXZc9bbE',
+    'https://s.shopee.co.id/5fmDWlzu3j',
+    'https://s.shopee.co.id/1LdEMj15zW',
+    'https://s.shopee.co.id/9AM5h5LMfz',
+    'https://s.shopee.co.id/8pjFISaNHR',
+    'https://s.shopee.co.id/17qmCDpQJ',
+    'https://s.shopee.co.id/1VweYw7Hhq',
+  ],
+};
 
-const getFallbackMenuImage = (name) => {
+export const heroImageUrl = '/images/Bgweb.jpeg';
+
+export const getFallbackMenuImage = (name) => {
   const lowerName = name.toLowerCase();
   const keywordRules = [
     ['mie', '/images/Mie Goreng.png'],
@@ -65,11 +95,10 @@ const getFallbackMenuImage = (name) => {
   ];
 
   const matchedRule = keywordRules.find(([keyword]) => lowerName.includes(keyword));
-
   return matchedRule ? matchedRule[1] : '/images/Logohappup.png';
 };
 
-const getProductKnowledge = (name) => {
+export const getProductKnowledge = (name) => {
   const lowerName = name.toLowerCase();
   const knowledgeRules = [
     ['nasi cap cay', 'Nasi hangat dengan tumisan sayur cap cay gurih.'],
@@ -121,7 +150,7 @@ const getProductKnowledge = (name) => {
     ['ayam saos teriyaki', 'Ayam dengan saus teriyaki manis gurih.'],
     ['ayam lada hitam', 'Ayam berbumbu lada hitam yang harum.'],
     ['sapi lada hitam', 'Daging sapi dengan saus lada hitam gurih.'],
-    ['udang goreng tepung', 'Udang berbalut tepung renyah dan gurih.'],
+    ['udang goreng tepung', 'Udang berbalut tepung renyah and gurih.'],
     ['udang mayonaise', 'Udang gurih dengan saus mayonaise creamy.'],
     ['udang saos tiram', 'Udang dimasak saus tiram gurih.'],
     ['udang asam manis', 'Udang dengan saus asam manis segar.'],
@@ -202,7 +231,6 @@ const getProductKnowledge = (name) => {
   ];
 
   const matchedRule = knowledgeRules.find(([keyword]) => lowerName.includes(keyword));
-
   return matchedRule ? matchedRule[1] : 'Pilihan menu favorit dengan rasa khas Happy Puppy.';
 };
 
@@ -214,7 +242,7 @@ const createItem = (name, price, icon, image = null) => ({
   description: getProductKnowledge(name),
 });
 
-const menuCategories = [
+export const menuCategories = [
   {
     id: 'nasi',
     label: 'Nasi Goreng',
@@ -258,6 +286,7 @@ const menuCategories = [
       createItem('Kentang Goreng', 50000, 'KG', '/images/KENTANGGORENG.png'),
       createItem('Sosis Goreng', 62000, 'SG', '/images/SOSISGORENG.png'),
       createItem('Onion Ring', 44000, 'OR', '/images/onion-ring.jpg'),
+      createItem('Pisang Keju', 37000, 'PK', '/images/PISANGKEJUCOKLAT.png'),
       createItem('Pisang Keju Coklat', 37000, 'PK', '/images/PISANGKEJUCOKLAT.png'),
       createItem('Snack Kombinasi', 87000, 'SK', '/images/SNACKKOMBINASI.png'),
       createItem('Cireng', 37000, 'CR', '/images/Cireng.jpg'),
@@ -405,110 +434,17 @@ const menuCategories = [
   },
 ];
 
-let filtersMenuHtml = '      <ul class="filters_menu">\n';
-menuCategories.forEach((cat, index) => {
-  let activeClass = index === 0 ? ' class="active"' : '';
-  filtersMenuHtml += '        <li' + activeClass + ' data-filter=".' + cat.id + '">' + cat.label + '</li>\n';
-});
-filtersMenuHtml += '      </ul>\n';
-
-let filtersContentHtml = '      <div class="filters-content">\n        <div class="row grid">\n';
-
-menuCategories.forEach(cat => {
-  cat.items.forEach(item => {
-    const imageUrl = "https://wawazrc.github.io" + item.image;
-    const priceFormatted = new Intl.NumberFormat('id-ID', {
-        style: 'currency',
-        currency: 'IDR',
-        maximumFractionDigits: 0,
-    }).format(item.price);
-    
-    filtersContentHtml += '          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all ' + cat.id + '">\n' +
-                          '            <div class="box">\n' +
-                          '              <div>\n' +
-                          '                <div class="img-box">\n' +
-                          '                  <img src="' + imageUrl + '" alt="">\n' +
-                          '                </div>\n' +
-                          '                <div class="detail-box">\n' +
-                          '                  <h5>\n' +
-                          '                    ' + item.name + '\n' +
-                          '                  </h5>\n' +
-                          '                  <p>\n' +
-                          '                    ' + item.description + '\n' +
-                          '                  </p>\n' +
-                          '                  <div class="options">\n' +
-                          '                    <h6>\n' +
-                          '                      ' + priceFormatted + '\n' +
-                          '                    </h6>\n' +
-                          '                    <button type="button" class="btn-add-cart" data-name="' + item.name + '" data-price="' + item.price + '">\n' +
-                          '                      + Add\n' +
-                          '                    </button>\n' +
-                          '                  </div>\n' +
-                          '                </div>\n' +
-                          '              </div>\n' +
-                          '            </div>\n' +
-                          '          </div>\n';
-  });
-});
-filtersContentHtml += '        </div>\n      </div>';
-
-const finalHtml = filtersMenuHtml + "\n" + filtersContentHtml;
-
-let homeMenuHtml = '      <ul class="filters_menu" style="display: none;">\n';
-if (menuCategories.length > 0) {
-  homeMenuHtml += '        <li class="active" data-filter=".' + menuCategories[0].id + '">' + menuCategories[0].label + '</li>\n';
-}
-homeMenuHtml += '      </ul>\n';
-let homeContentHtml = '      <div class="filters-content">\n        <div class="row grid">\n';
-
-// Hanya ambil kategori pertama (Nasi Goreng) untuk Beranda
-if (menuCategories.length > 0) {
-  const cat = menuCategories[0];
-  cat.items.forEach(item => {
-    const imageUrl = "https://wawazrc.github.io" + item.image;
-    const priceFormatted = new Intl.NumberFormat('id-ID', {
-        style: 'currency',
-        currency: 'IDR',
-        maximumFractionDigits: 0,
-    }).format(item.price);
-    
-    homeContentHtml += '          <div class="col-6 col-sm-6 col-md-4 col-lg-3 all ' + cat.id + '">\n' +
-                          '            <div class="box">\n' +
-                          '              <div>\n' +
-                          '                <div class="img-box">\n' +
-                          '                  <img src="' + imageUrl + '" alt="">\n' +
-                          '                </div>\n' +
-                          '                <div class="detail-box">\n' +
-                          '                  <h5>\n' +
-                          '                    ' + item.name + '\n' +
-                          '                  </h5>\n' +
-                          '                  <p>\n' +
-                          '                    ' + item.description + '\n' +
-                          '                  </p>\n' +
-                          '                  <div class="options">\n' +
-                          '                    <h6>\n' +
-                          '                      ' + priceFormatted + '\n' +
-                          '                    </h6>\n' +
-                          '                    <button type="button" class="btn-add-cart" data-name="' + item.name + '" data-price="' + item.price + '">\n' +
-                          '                      + Add\n' +
-                          '                    </button>\n' +
-                          '                  </div>\n' +
-                          '                </div>\n' +
-                          '              </div>\n' +
-                          '            </div>\n' +
-                          '          </div>\n';
-  });
-}
-homeContentHtml += '        </div>\n      </div>';
-
-const homeHtml = homeMenuHtml + homeContentHtml;
-
-const indexContent = fs.readFileSync('index.php', 'utf8');
-const newIndexContent = indexContent.replace(/<ul class="filters_menu"[^>]*>[\s\S]*?<div class="btn-box">\s*<a[^>]*>[\s\S]*?<\/a>\s*<\/div>/g, homeHtml + '\n      <div class="btn-box">\n        <a href="menu.html">\n          Lihat Selengkapnya\n        </a>\n      </div>');
-fs.writeFileSync('index.php', newIndexContent);
-
-const menuContent = fs.readFileSync('menu.html', 'utf8');
-const newMenuContent = menuContent.replace(/<ul class="filters_menu"[^>]*>[\s\S]*?<div class="btn-box">\s*<a[^>]*>[\s\S]*?<\/a>\s*<\/div>/g, finalHtml);
-fs.writeFileSync('menu.html', newMenuContent);
-
-console.log("Menu generated and updated successfully in index.php and menu.html");
+export const roomGroups = [
+  {
+    label: 'Lantai 1',
+    rooms: ['Room 11', 'Room 12', 'Room 14', 'Room 116', 'Room 117', 'Room 118', 'Room 119', 'Room 101', 'Room 102'],
+  },
+  {
+    label: 'Lantai 2',
+    rooms: ['Room 21', 'Room 22', 'Room 23', 'Room 24', 'Room 125', 'Room 126', 'Room 127', 'Room 128', 'Room 129', 'Room 201', 'Room 202', 'Room 203', 'Room 204'],
+  },
+  {
+    label: 'Lantai 3',
+    rooms: ['Room 31', 'Room 32', 'Room 33', 'Room 34', 'Room 136', 'Room 137', 'Room 138', 'Room 139', 'Room 301', 'Room 302', 'Room 303', 'Room 304'],
+  },
+];

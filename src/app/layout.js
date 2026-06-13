@@ -1,0 +1,39 @@
+import { CartProvider } from '@/context/CartContext';
+import AffiliateWrapper from '@/components/AffiliateWrapper';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import ClientInit from '@/components/ClientInit';
+import './globals.css';
+
+export const metadata = {
+  title: 'Happup Antasari',
+  description: 'Tempat karaoke keluarga terbaik dengan fasilitas modern, pilihan lagu terlengkap, dan suasana yang nyaman untuk momen seru Anda.',
+  icons: {
+    icon: '/images/favicon.png?v=2',
+  },
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="id">
+      <head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
+      </head>
+      <body>
+        <CartProvider>
+          <AffiliateWrapper>
+            <ClientInit />
+            {children}
+            <Footer />
+          </AffiliateWrapper>
+        </CartProvider>
+      </body>
+    </html>
+  );
+}
