@@ -1173,7 +1173,8 @@ a:focus {
 }
 
 /* Cart UI */
-.btn-add-cart {
+.btn-add-cart,
+.btn-add-cart-link {
   background-color: #d4af37;
   color: #fff;
   border: none;
@@ -1184,9 +1185,13 @@ a:focus {
   font-size: 13px;
   white-space: nowrap;
   transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
-.btn-add-cart:hover {
+.btn-add-cart:hover,
+.btn-add-cart-link:hover {
   background-color: #e69c00;
+  color: #fff;
 }
 .btn-add-cart.added {
   background-color: #28a745;

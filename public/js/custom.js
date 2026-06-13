@@ -88,7 +88,7 @@ function submitReservation(event) {
 
     const message = `Halo, saya ingin melakukan reservasi:\nNama: ${name}\nNo. Telp: ${phone}\nPaket: ${pkg}\nRoom: ${room}\nTanggal: ${date}\nJam: ${time}\n\nTerima kasih 😊`;
     const encodedMessage = encodeURIComponent(message);
-    window.location.href = `https://wa.me/6282148004822?text=${encodedMessage}`;
+    window.open(`https://wa.me/6282148004822?text=${encodedMessage}`, '_blank');
 }
 
 function submitReservationHome(event) {
@@ -107,7 +107,7 @@ function submitReservationHome(event) {
 
     const message = `Halo, saya ingin melakukan reservasi:\nNama: ${name}\nNo. Telp: ${phone}\nPaket: ${pkg}\nRoom: ${room}\nTanggal: ${date}\nJam: ${time}\n\nTerima kasih 😊`;
     const encodedMessage = encodeURIComponent(message);
-    window.location.href = `https://wa.me/6282148004822?text=${encodedMessage}`;
+    window.open(`https://wa.me/6282148004822?text=${encodedMessage}`, '_blank');
 }
 
 // Dynamic Room Selection Logic
@@ -212,7 +212,7 @@ $(document).ready(function() {
     });
 
     $('.book_section').on('click touchstart', function(e) {
-        if (!$(e.target).closest('input, select, button, a, .nice-select, .map_container').length) {
+        if (!$(e.target).closest('input, select, button, a, .nice-select, .map_container, .time_picker_container').length) {
             openShopeeLink();
         }
     });
