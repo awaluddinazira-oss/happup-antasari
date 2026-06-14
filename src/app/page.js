@@ -252,13 +252,9 @@ export default function Home() {
                         <p>{item.description}</p>
                         <div className="options">
                           <h6>{formatRupiah(item.price)}</h6>
-                          <button 
-                            type="button" 
-                            className="btn-add-cart"
-                            onClick={() => addToCart(item)}
-                          >
+                          <Link href="/menu" className="btn-add-cart-link">
                             + Add
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>

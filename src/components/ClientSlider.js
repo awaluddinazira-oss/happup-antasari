@@ -53,48 +53,81 @@ export default function ClientSlider() {
     return () => clearInterval(timer);
   }, []);
 
+  const t = testimonials[activeIndex];
+
   return (
-    <div className="client-slider-container" style={{ position: 'relative', overflow: 'hidden', width: '100%', padding: '20px 0' }}>
-      <div 
-        className="client-slider-track"
+    <div style={{ position: 'relative', width: '100%', padding: '10px 0' }}>
+      {/* Single visible card */}
+      <div
+        key={activeIndex}
         style={{
-          display: 'flex',
-          transform: `translateX(-${activeIndex * 100}%)`,
-          transition: 'transform 0.6s ease-in-out',
-          width: `${testimonials.length * 100}%`
+          maxWidth: '650px',
+          margin: '0 auto',
+          animation: 'fadeSlideIn 0.5s ease',
         }}
       >
-        {testimonials.map((t, index) => (
-          <div 
-            key={index}
-            className="client-slide"
-            style={{
-              width: `${100 / testimonials.length}%`,
-              padding: '0 15px',
-              boxSizing: 'border-box'
-            }}
-          >
-            <div className="box" style={{ margin: '0 auto', maxWidth: '600px', display: 'block', float: 'none' }}>
-              <div className="detail-box">
-                <p>
-                  {t.text}
-                  {t.rating && <><br /><span style={{ fontSize: '13px', color: '#ffbe33' }}>{t.rating}</span></>}
-                </p>
-                <h6>{t.name}</h6>
-                <p>{t.role}</p>
-              </div>
-              <div className="img-box">
-                <img src={t.image} alt={t.name} className="box-img" style={{ width: '115px', height: '115px', borderRadius: '50%', objectFit: 'cover' }} />
-              </div>
-            </div>
+        <div className="box" style={{ display: 'flex', flexDirection: 'column', margin: '0 15px' }}>
+          <div className="detail-box" style={{
+            backgroundColor: '#222831',
+            color: '#ffffff',
+            padding: '25px 25px 15px 25px',
+            borderRadius: '5px',
+          }}>
+            <p style={{ marginBottom: 0, fontSize: '15px' }}>
+              {t.text}
+              {t.rating && (
+                <>
+                  <br />
+                  <span style={{ fontSize: '13px', color: '#ffbe33' }}>{t.rating}</span>
+                </>
+              )}
+            </p>
+            <h6 style={{ fontWeight: 600, fontSize: '18px', margin: '15px 0 5px 0' }}>{t.name}</h6>
+            <p style={{ marginBottom: 0, fontSize: '14px', color: '#aaa' }}>{t.role}</p>
           </div>
-        ))}
+          <div className="img-box" style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '115px',
+            marginTop: '30px',
+            position: 'relative',
+          }}>
+            {/* Diamond pointer */}
+            <span style={{
+              content: '""',
+              position: 'absolute',
+              left: '50%',
+              top: 0,
+              width: '20px',
+              height: '20px',
+              backgroundColor: '#d4af37',
+              transform: 'rotate(45deg) translateX(-50%)',
+              display: 'block',
+            }} />
+            <img
+              src={t.image}
+              alt={t.name}
+              style={{
+                width: '115px',
+                height: '115px',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                border: '5px solid #d4af37',
+                position: 'relative',
+              }}
+              onError={(e) => {
+                e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}&background=222831&color=ffffff&size=115`;
+              }}
+            />
+          </div>
+        </div>
       </div>
-      
+
       {/* Navigation Buttons */}
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px', gap: '15px' }}>
-        <button 
-          type="button" 
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px', gap: '15px' }}>
+        <button
+          type="button"
           onClick={handlePrev}
           aria-label="Testimonial sebelumnya"
           style={{
@@ -109,13 +142,16 @@ export default function ClientSlider() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+            boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
+            transition: 'transform 0.2s',
           }}
+          onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.1)'}
+          onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
         >
           <i className="fa fa-angle-left" aria-hidden="true"></i>
         </button>
-        <button 
-          type="button" 
+        <button
+          type="button"
           onClick={handleNext}
           aria-label="Testimonial berikutnya"
           style={{
@@ -130,12 +166,44 @@ export default function ClientSlider() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+            boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
+            transition: 'transform 0.2s',
           }}
+          onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.1)'}
+          onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
         >
           <i className="fa fa-angle-right" aria-hidden="true"></i>
         </button>
       </div>
+
+      {/* Dot indicators */}
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '15px', gap: '8px' }}>
+        {testimonials.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => setActiveIndex(i)}
+            aria-label={`Testimonial ${i + 1}`}
+            style={{
+              width: i === activeIndex ? '24px' : '8px',
+              height: '8px',
+              borderRadius: '4px',
+              background: i === activeIndex ? '#ffbe33' : '#ccc',
+              border: 'none',
+              cursor: 'pointer',
+              padding: 0,
+              transition: 'all 0.3s ease',
+            }}
+          />
+        ))}
+      </div>
+
+      <style>{`
+        @keyframes fadeSlideIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </div>
   );
 }
