@@ -110,6 +110,8 @@ export default function BookPage() {
                       <option value="Paket Nyantui">Paket Nyantui</option>
                       <option value="Paket Nyambar">Paket Nyambar</option>
                       <option value="Paket Mode Game">Paket Mode Game</option>
+                      <option value="Promo Ulang Tahun">Promo Ulang Tahun</option>
+                      <option value="Promo Senin Murce">Promo Senin Murce</option>
                     </select>
                   </div>
                   <div className="form-group">
