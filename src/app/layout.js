@@ -6,7 +6,7 @@ import ClientInit from '@/components/ClientInit';
 import './globals.css';
 
 export const metadata = {
-  title: 'Happup Antasari',
+  title: 'Happup Antasari — Karaoke Keluarga Terbaik di Samarinda',
   description: 'Tempat karaoke keluarga terbaik dengan fasilitas modern, pilihan lagu terlengkap, dan suasana yang nyaman untuk momen seru Anda.',
   icons: {
     icon: '/images/favicon.png?v=2',
@@ -20,8 +20,11 @@ export default function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        {/* Bootstrap */}
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+        {/* Font Awesome */}
         <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
+        {/* Custom styles */}
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
         <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
       </head>
