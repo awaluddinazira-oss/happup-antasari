@@ -190,6 +190,64 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ── PROMO SECTION ── */}
+      <section className="promo_section layout_padding-bottom" style={{ paddingTop: '80px' }}>
+        <div className="container">
+          <div className="heading_container heading_center" style={{ marginBottom: '48px' }}>
+            <div style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              padding: '6px 16px',
+              background: 'rgba(212, 175, 55, 0.12)',
+              border: '1px solid rgba(212, 175, 55, 0.3)',
+              borderRadius: '50px',
+              fontSize: '12px', fontWeight: '600', color: '#d4af37',
+              letterSpacing: '1px', textTransform: 'uppercase',
+              marginBottom: '16px',
+            }}>
+              🎉 Promo Terhangat
+            </div>
+            <h2>Promo Spesial</h2>
+            <p style={{ marginTop: '12px', maxWidth: '480px' }}>Nikmati berbagai promo seru dan hemat khusus untuk Anda di Happy Puppy Antasari</p>
+          </div>
+
+          <div className="promo-container">
+            {/* Box Promo 1: Ultah */}
+            <div className="promo-card" data-aos="fade-up">
+              <span className="promo-badge">Birthday Special</span>
+              <div className="promo-img-wrapper">
+                <img src="/images/promo-ultah.jpg" alt="Promo Ultah" />
+              </div>
+              <div className="promo-info">
+                <div>
+                  <h4>Promo Ulang Tahun</h4>
+                  <p>Dapatkan Gratis Karaoke 2 Jam dan Diskon 20% untuk Food &amp; Beverage. Berlaku s/d H+7 dari tanggal lahir Anda!</p>
+                </div>
+                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
+                  Ambil Promo
+                </Link>
+              </div>
+            </div>
+
+            {/* Box Promo 2: Senin Murce */}
+            <div className="promo-card" data-aos="fade-up" data-aos-delay="150">
+              <span className="promo-badge">Monday Deal</span>
+              <div className="promo-img-wrapper">
+                <img src="/images/promo-senin.jpg" alt="Promo Senin Murce" />
+              </div>
+              <div className="promo-info">
+                <div>
+                  <h4>Senin Murce</h4>
+                  <p>Bernyanyi sepuasnya selama 3 Jam hanya dengan Rp 50.000,- setiap hari Senin. Cara terbaik memulai awal pekanmu!</p>
+                </div>
+                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
+                  Ambil Promo
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── FOOD / MENU SECTION ── */}
       <section className="food_section layout_padding-bottom" style={{ paddingTop: '80px' }}>
         <div className="container">
