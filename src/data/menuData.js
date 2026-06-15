@@ -48,7 +48,7 @@ export const getFallbackMenuImage = (name) => {
     ['tahu', '/images/TAHU-BAKSO.jpeg'],
     ['telur', '/images/TELUR-DADAR.jpg'],
     ['paru', '/images/PARU.jpg'],
-    ['pempek', '/images/OTE-OTE.jpg'],
+    ['pempek', '/images/mpek-mpek.png'],
     ['sop iga', '/images/SOP-IGA-SAPI.png'],
     ['ayam lada hitam', '/images/ayam-lada-hitam.png'],
     ['ayam', '/images/resep-ayam-goreng-krispi-korea_43.jpeg'],
@@ -298,7 +298,7 @@ export const menuCategories = [
       createItem('Paru Goreng Crispy', 83000, 'PC', '/images/PARU.jpg'),
       createItem('Paru Goreng Pedas', 83000, 'PP', '/images/PARU.jpg'),
       createItem('Ote-Ote', 50000, 'OO', '/images/OTE-OTE.jpg'),
-      createItem('Pempek', 50000, 'PM', '/images/OTE-OTE.jpg'),
+      createItem('Pempek', 50000, 'PM', '/images/mpek-mpek.png'),
     ],
   },
   {
