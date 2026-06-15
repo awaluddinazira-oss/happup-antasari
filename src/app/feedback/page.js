@@ -34,9 +34,9 @@ export default function FeedbackPage() {
       </div>
 
       {/* contact section */}
-      <section className="contact_section layout_padding" data-aos="fade-up">
+      <section className="book_section layout_padding" data-aos="fade-up">
         <div className="container">
-          <div className="heading_container">
+          <div className="heading_container heading_center" style={{ marginBottom: '40px' }}>
             <h2>Kritik dan Saran</h2>
           </div>
           <div className="row">
@@ -44,13 +44,14 @@ export default function FeedbackPage() {
               <div 
                 className="alert alert-warning text-center" 
                 style={{
-                  borderRadius: '10px',
+                  borderRadius: '16px',
                   fontSize: '14px',
-                  backgroundColor: '#fff3cd',
-                  border: '1px solid #ffeeba',
-                  color: '#856404',
-                  marginBottom: '25px',
-                  padding: '15px'
+                  backgroundColor: 'rgba(212, 175, 55, 0.12)',
+                  border: '1px solid rgba(212, 175, 55, 0.3)',
+                  color: '#d4af37',
+                  marginBottom: '30px',
+                  padding: '16px',
+                  lineHeight: '1.6',
                 }}
               >
                 <strong>Punya bukti foto atau video?</strong><br />
@@ -61,6 +62,7 @@ export default function FeedbackPage() {
                   <div className="form-group">
                     <input 
                       type="text" 
+                      className="form-control"
                       placeholder="Nama Lengkap" 
                       value={name}
                       onChange={(e) => setName(e.target.value)}
@@ -69,6 +71,7 @@ export default function FeedbackPage() {
                   <div className="form-group">
                     <input 
                       type="text" 
+                      className="form-control"
                       placeholder="Nomor Telepon / WhatsApp" 
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
@@ -77,22 +80,23 @@ export default function FeedbackPage() {
                   <div className="form-group">
                     <input 
                       type="email" 
+                      className="form-control"
                       placeholder="Email Anda" 
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="form-group">
-                    <input 
-                      type="text" 
-                      className="message-box" 
+                    <textarea 
+                      className="form-control message-box" 
                       placeholder="Tuliskan kritik dan saran Anda di sini..." 
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
+                      style={{ height: '140px', padding: '16px', resize: 'none' }}
                     />
                   </div>
-                  <div className="btn-box">
-                    <button type="submit">
+                  <div className="btn_box" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <button type="submit" style={{ width: '100%', maxWidth: '280px' }}>
                       Kirim Saran
                     </button>
                   </div>
