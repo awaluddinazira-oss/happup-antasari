@@ -44,7 +44,27 @@ export default function Home() {
     }).format(amount);
   };
 
-  const nasiGorengItems = menuCategories.find(c => c.id === 'nasi')?.items || [];
+  const featuredItemNames = [
+    'Sop Iga Sapi',
+    'Sapi Lada Hitam',
+    'Ayam Lada Hitam',
+    'Cumi Saos Tiram',
+    'Buah Segar',
+    'Mie Goreng Spesial',
+    'Nasi Goreng Spesial',
+    'Nasi Cap Cay',
+    'Nasi Goreng Seafood',
+    'Mie Kuah Spesial',
+    'Snack Kombinasi',
+    'Ayam Saos Teriyaki',
+    'Udang Saos Tiram',
+    'Fu Yung Hai'
+  ];
+
+  const allItems = menuCategories.flatMap(category => category.items);
+  const featuredItems = featuredItemNames.map(name => 
+    allItems.find(item => item.name.toLowerCase() === name.toLowerCase())
+  ).filter(Boolean);
 
   return (
     <main>
@@ -258,10 +278,10 @@ export default function Home() {
 
           <div className="filters-content">
             <div className="row grid">
-              {nasiGorengItems.map((item, index) => (
+              {featuredItems.map((item, index) => (
                 <div
                   key={item.name}
-                  className="col-6 col-sm-6 col-md-4 col-lg-3 all nasi"
+                  className="col-6 col-sm-6 col-md-4 col-lg-3 all"
                   data-aos="zoom-in"
                   data-aos-delay={(index % 4) * 100}
                 >
