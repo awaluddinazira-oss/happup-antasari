@@ -246,7 +246,7 @@ export default function MenuPage() {
                     <div>
                       <div className="img-box">
                         <img
-                          src={item.image.startsWith('http') || item.image.includes('Mpek-mpek') || item.image.includes('tahu-cabe-garam') ? item.image : `https://wawazrc.github.io${item.image}`}
+                          src={item.image.startsWith('http') || item.image.includes('Mpek-mpek') || item.image.includes('tahu-cabe-garam') || item.image.includes('paru-goreng-pedas') ? item.image : `https://wawazrc.github.io${item.image}`}
                           alt={item.name}
                           onError={(e) => {
                             e.target.onerror = null;

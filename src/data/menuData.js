@@ -295,7 +295,7 @@ export const menuCategories = [
       createItem('Telur Dadar', 19000, 'TD', '/images/TELUR-DADAR.jpg'),
       createItem('Telur Mata Sapi', 19000, 'TM', '/images/TELUR-MATA-SAPI.jpg'),
       createItem('Paru Goreng Crispy', 83000, 'PC', '/images/PARU.jpg'),
-      createItem('Paru Goreng Pedas', 83000, 'PP', '/images/PARU.jpg'),
+      createItem('Paru Goreng Pedas', 83000, 'PP', '/images/paru-goreng-pedas.jpg'),
       createItem('Ote-Ote', 50000, 'OO', '/images/OTE-OTE.jpg'),
       createItem('Pempek', 50000, 'PM', '/images/Mpek-mpek.png'),
     ],
