@@ -291,7 +291,7 @@ export const menuCategories = [
       createItem('Cireng', 37000, 'CR', '/images/Cireng.jpg'),
       createItem('Tempe Mendoan', 44000, 'TM', '/images/Tempe-Mendoan.jpg'),
       createItem('Tahu Bakso Goreng', 50000, 'TB', '/images/TAHU-BAKSO.jpeg'),
-      createItem('Tahu Cabe Garam', 44000, 'TC', '/images/TAHU-BAKSO.jpeg'),
+      createItem('Tahu Cabe Garam', 44000, 'TC', '/images/tahu-cabe-garam.jpg'),
       createItem('Telur Dadar', 19000, 'TD', '/images/TELUR-DADAR.jpg'),
       createItem('Telur Mata Sapi', 19000, 'TM', '/images/TELUR-MATA-SAPI.jpg'),
       createItem('Paru Goreng Crispy', 83000, 'PC', '/images/PARU.jpg'),
