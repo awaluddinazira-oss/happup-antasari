@@ -1831,6 +1831,29 @@ a, button, .btn, .btn1, .btn2, .box, .detail-box, .img-box, .nav-link {
   }
 }
 
+@media (max-width: 576px) {
+  .food_section .box .options {
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .food_section .box .options h6 {
+    margin: 0;
+    font-size: 13px;
+    flex-grow: 1;
+  }
+
+  .btn-add-cart {
+    width: 100%;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
 ::selection {
   background: rgba(212, 175, 55, 0.3);
   color: #fff;
