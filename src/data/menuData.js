@@ -286,7 +286,7 @@ export const menuCategories = [
       createItem('Kentang Goreng', 50000, 'KG', '/images/KENTANGGORENG.png'),
       createItem('Sosis Goreng', 62000, 'SG', '/images/SOSISGORENG.png'),
       createItem('Onion Ring', 44000, 'OR', '/images/onion-ring.jpg'),
-
+      createItem('Pisang Keju Coklat', 37000, 'PK', '/images/PISANGKEJUCOKLAT.png'),
       createItem('Snack Kombinasi', 87000, 'SK', '/images/SNACKKOMBINASI.png'),
       createItem('Cireng', 37000, 'CR', '/images/Cireng.jpg'),
       createItem('Tempe Mendoan', 44000, 'TM', '/images/Tempe-Mendoan.jpg'),
