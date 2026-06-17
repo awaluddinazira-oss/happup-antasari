@@ -316,7 +316,7 @@ export const menuCategories = [
       createItem('Cumi Saos Tiram', 68000, 'CT', '/images/cumi-treyaki.png'),
       createItem('Cumi Goreng Kering', 68000, 'CG', '/images/cumi-treyaki.png'),
       createItem('Cumi Saos Teriyaki', 68000, 'CT', '/images/cumi-treyaki.png'),
-      createItem('Cumi Saos Mentega', 68000, 'CM', '/images/CUMI-SAOS-TIRAM.png'),
+      createItem('Cumi Saos Mentega', 68000, 'CM', '/images/cumi-saos-mentega.jpg'),
       createItem('Fu Yung Hai', 56000, 'FY', '/images/fu-yung-hay.jpg'),
       createItem('Cap Cay Goreng', 56000, 'CC', '/images/CAPCAY.png'),
       createItem('Cap Cay Kuah', 56000, 'CC', '/images/CAPCAY.png'),
