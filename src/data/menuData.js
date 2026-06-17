@@ -98,6 +98,45 @@ export const getFallbackMenuImage = (name) => {
   return matchedRule ? matchedRule[1] : '/images/Logohappup.png';
 };
 
+export const getMenuImageUrl = (imagePath) => {
+  if (!imagePath) return '/images/Logohappup.png';
+  if (imagePath.startsWith('http')) return imagePath;
+
+  // List of images stored locally in public/images
+  const localImageNames = [
+    'Mpek-mpek',
+    'tahu-cabe-garam',
+    'paru-goreng-pedas',
+    'cumi-saos-mentega',
+    'CUMI-SAOS-TIRAM',
+    'cumi-treyaki',
+    'Happy-hour',
+    'Logo Puppy',
+    'Paket-hepimode-game',
+    'Paket-nyambar',
+    'Paket-nyantui',
+    'abaut-img',
+    'client1',
+    'client2',
+    'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9',
+    'favicon',
+    'harga-room',
+    'hero-bg',
+    'logo',
+    'o1', 'o2',
+    'promo-senin',
+    'promo-ultah'
+  ];
+
+  const isLocal = localImageNames.some((name) => imagePath.includes(name));
+  if (isLocal) {
+    return imagePath;
+  }
+
+  return `https://wawazrc.github.io${imagePath}`;
+};
+
+
 export const getProductKnowledge = (name) => {
   const lowerName = name.toLowerCase();
   const knowledgeRules = [

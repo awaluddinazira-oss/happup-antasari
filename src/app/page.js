@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import ClientSlider from '@/components/ClientSlider';
-import { menuCategories } from '@/data/menuData';
+import { menuCategories, getMenuImageUrl } from '@/data/menuData';
 import { useCart } from '@/context/CartContext';
 
 const slides = [
@@ -289,8 +289,13 @@ export default function Home() {
                     <div>
                       <div className="img-box">
                         <img
-                          src={item.image.startsWith('http') ? item.image : `https://wawazrc.github.io${item.image}`}
+                          src={getMenuImageUrl(item.image)}
                           alt={item.name}
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.style.display = 'none';
+                            e.target.parentNode.innerHTML = `<span style="font-size:28px">${item.icon || '🍽️'}</span>`;
+                          }}
                         />
                       </div>
                       <div className="detail-box">
