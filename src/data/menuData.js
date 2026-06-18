@@ -290,7 +290,7 @@ export const menuCategories = [
       createItem('Nasi Goreng Seafood', 62000, 'NS', '/images/Nasi-goreng-seafood.jpg'),
       createItem('Nasi Cap Cay', 56000, 'NC', '/images/CAPCAY.png'),
       createItem('Nasi Goreng Ayam', 56000, 'NG', '/images/Nasi Goreng.png'),
-      createItem('Nasi Goreng Hongkong', 56000, 'NG', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Hongkong', 56000, 'NG', '/images/Nasi-Goreng-Ikan-Asin.jpg'),
       createItem('Nasi Goreng Ikan Asin', 56000, 'NG', '/images/Nasi-Goreng-Ikan-Asin.jpg'),
       createItem('Nasi Goreng Jawa', 56000, 'NG', '/images/Nasi Goreng.png'),
       createItem('Nasi Goreng Original', 56000, 'NO', '/images/Nasi Goreng.png'),
