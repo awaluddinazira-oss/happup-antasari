@@ -125,7 +125,8 @@ export const getMenuImageUrl = (imagePath) => {
     'logo',
     'o1', 'o2',
     'promo-senin',
-    'promo-ultah'
+    'promo-ultah',
+    'Nasi-Goreng-Ikan-Asin',
   ];
 
   const isLocal = localImageNames.some((name) => imagePath.includes(name));
@@ -290,7 +291,7 @@ export const menuCategories = [
       createItem('Nasi Cap Cay', 56000, 'NC', '/images/CAPCAY.png'),
       createItem('Nasi Goreng Ayam', 56000, 'NG', '/images/Nasi Goreng.png'),
       createItem('Nasi Goreng Hongkong', 56000, 'NG', '/images/Nasi Goreng.png'),
-      createItem('Nasi Goreng Ikan Asin', 56000, 'NG', '/images/Nasi Goreng.png'),
+      createItem('Nasi Goreng Ikan Asin', 56000, 'NG', '/images/Nasi-Goreng-Ikan-Asin.jpg'),
       createItem('Nasi Goreng Jawa', 56000, 'NG', '/images/Nasi Goreng.png'),
       createItem('Nasi Goreng Original', 56000, 'NO', '/images/Nasi Goreng.png'),
       createItem('Nasi Goreng Spesial', 56000, 'NS', '/images/Nasi Goreng.png'),
