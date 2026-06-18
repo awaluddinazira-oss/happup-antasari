@@ -309,7 +309,6 @@ export const menuCategories = [
       createItem('Mie Goreng Spesial', 56000, 'MG', '/images/Mie Goreng.png'),
       createItem('Mie Goreng Udang', 56000, 'MG', '/images/Mie Goreng.png'),
       createItem('Mie Goreng Jawa', 56000, 'MG', '/images/Mie Goreng.png'),
-      createItem('Mie Kuah Spesial', 56000, 'MK', '/images/MIEKUAHSPESIAL.png'),
       createItem('Kwetiaw Goreng Spesial', 56000, 'KG', '/images/Kwetiaw Goreng.png'),
       createItem('Bihun Goreng Spesial', 56000, 'BG', '/images/Bihun Goreng.png'),
       createItem('Mi Godok', 53000, 'MG', '/images/MIEGODOK.png'),
