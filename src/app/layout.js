@@ -3,6 +3,7 @@ import AffiliateWrapper from '@/components/AffiliateWrapper';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ClientInit from '@/components/ClientInit';
+import ScrollToTop from '@/components/ScrollToTop';
 import './globals.css';
 
 export const metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
             <ClientInit />
             {children}
             <Footer />
+            <ScrollToTop />
           </AffiliateWrapper>
         </CartProvider>
       </body>
