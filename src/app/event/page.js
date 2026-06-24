@@ -115,7 +115,7 @@ export default function AboutPage() {
               <div className="promo-info">
                 <div>
                   <h4>Promo Tanggal 22</h4>
-                  <p>Bernyanyi 1 Jam hanya Rp 22.000,- setiap tanggal 22 sepanjang hari (All Day). Berlaku dengan minimal check-in karaoke selama 2 Jam.</p>
+                  <p>Bernyanyi 1 Jam hanya <strong>Rp 22,-</strong> setiap tanggal 22 sepanjang hari (All Day). Berlaku dengan minimal check-in karaoke selama 2 Jam.</p>
                 </div>
                 <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
                   Ambil Promo
