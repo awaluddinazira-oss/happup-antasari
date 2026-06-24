@@ -210,115 +210,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── PROMO SECTION ── */}
-      <section className="promo_section layout_padding-bottom" style={{ paddingTop: '80px' }}>
-        <div className="container">
-          <div className="heading_container heading_center" style={{ marginBottom: '48px' }}>
-            <div style={{
-              display: 'inline-flex', alignItems: 'center', gap: '8px',
-              padding: '6px 16px',
-              background: 'rgba(212, 175, 55, 0.12)',
-              border: '1px solid rgba(212, 175, 55, 0.3)',
-              borderRadius: '50px',
-              fontSize: '12px', fontWeight: '600', color: '#d4af37',
-              letterSpacing: '1px', textTransform: 'uppercase',
-              marginBottom: '16px',
-            }}>
-              🎉 Promo Terhangat
-            </div>
-            <h2>Promo Spesial</h2>
-            <p style={{ marginTop: '12px', maxWidth: '480px' }}>Nikmati berbagai promo seru dan hemat khusus untuk Anda di Happy Puppy Antasari</p>
-          </div>
-
-          <div className="promo-container">
-            {/* Box Promo 1: Ultah */}
-            <div className="promo-card" data-aos="fade-up">
-              <span className="promo-badge">Birthday Special</span>
-              <div className="promo-img-wrapper">
-                <img src="/images/promo-ultah.jpg" alt="Promo Ulang Tahun" />
-              </div>
-              <div className="promo-info">
-                <div>
-                  <h4>Promo Ulang Tahun</h4>
-                  <p>Dapatkan Gratis Karaoke 2 Jam dan Diskon 20% untuk Food &amp; Beverage. Berlaku s/d H+7 dari tanggal lahir Anda!</p>
-                </div>
-                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
-                  Ambil Promo
-                </Link>
-              </div>
-            </div>
-
-            {/* Box Promo 2: Senin Murce */}
-            <div className="promo-card" data-aos="fade-up" data-aos-delay="100">
-              <span className="promo-badge">Monday Deal</span>
-              <div className="promo-img-wrapper">
-                <img src="/images/promo-senin.jpg" alt="Promo Senin Murce" />
-              </div>
-              <div className="promo-info">
-                <div>
-                  <h4>Senin Murce</h4>
-                  <p>Bernyanyi sepuasnya selama 3 Jam hanya dengan Rp 50.000,- setiap hari Senin. Cara terbaik memulai awal pekanmu!</p>
-                </div>
-                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
-                  Ambil Promo
-                </Link>
-              </div>
-            </div>
-
-            {/* Box Promo 3: Tanggal 22 */}
-            <div className="promo-card" data-aos="fade-up" data-aos-delay="200">
-              <span className="promo-badge">Monthly Deal</span>
-              <div className="promo-img-wrapper">
-                <img src="/images/promo-tgl22.jpg" alt="Promo Tanggal 22" />
-              </div>
-              <div className="promo-info">
-                <div>
-                  <h4>Promo Tanggal 22</h4>
-                  <p>Bernyanyi 1 Jam hanya Rp 22.000,- setiap tanggal 22 sepanjang hari (All Day). Berlaku dengan minimal check-in karaoke selama 2 Jam.</p>
-                </div>
-                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
-                  Ambil Promo
-                </Link>
-              </div>
-            </div>
-
-            {/* Box Promo 4: GRWM */}
-            <div className="promo-card" data-aos="fade-up" data-aos-delay="300">
-              <span className="promo-badge">Ladies Special</span>
-              <div className="promo-img-wrapper">
-                <img src="/images/promo-grwm.jpg" alt="Promo GRWM" />
-              </div>
-              <div className="promo-info">
-                <div>
-                  <h4>Girls Ready With Mic</h4>
-                  <p>Untuk kamu para cewek yang memakai Jersey Piala Dunia, nikmati GRATIS Karaoke selama 2 Jam setiap hari Selasa &amp; Rabu. No Jersey, No Party!</p>
-                </div>
-                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
-                  Ambil Promo
-                </Link>
-              </div>
-            </div>
-
-            {/* Box Promo 5: Telkomsel Poin */}
-            <div className="promo-card" data-aos="fade-up" data-aos-delay="400">
-              <span className="promo-badge">Telkomsel Special</span>
-              <div className="promo-img-wrapper">
-                <img src="/images/promo-telkomsel.png" alt="Promo Telkomsel Poin" />
-              </div>
-              <div className="promo-info">
-                <div>
-                  <h4>Diskon Telkomsel Poin</h4>
-                  <p>Tukarkan 3000 Telkomsel Poin untuk mendapatkan Diskon 2 Jam All Room &amp; Diskon 15% untuk Food &amp; Beverage. Ketik SMDHAPPY3K26 kirim SMS ke 777.</p>
-                </div>
-                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
-                  Ambil Promo
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── FOOD / MENU SECTION ── */}
       <section className="food_section layout_padding-bottom" style={{ paddingTop: '80px' }}>
         <div className="container">
@@ -410,7 +301,7 @@ export default function Home() {
                   <span className="about_badge">⭐ 4.8 Rating</span>
                   <span className="about_badge">🕐 Buka 11 Pagi</span>
                 </div>
-                <Link href="/about">Baca Selengkapnya</Link>
+                <Link href="/event">Baca Selengkapnya</Link>
               </div>
             </div>
           </div>
