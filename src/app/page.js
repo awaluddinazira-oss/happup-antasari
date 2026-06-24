@@ -301,7 +301,7 @@ export default function Home() {
                   <span className="about_badge">⭐ 4.8 Rating</span>
                   <span className="about_badge">🕐 Buka 11 Pagi</span>
                 </div>
-                <Link href="/event">Baca Selengkapnya</Link>
+                <Link href="/promo">Baca Selengkapnya</Link>
               </div>
             </div>
           </div>

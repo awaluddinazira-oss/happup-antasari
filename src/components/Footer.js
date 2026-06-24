@@ -33,10 +33,10 @@ export default function Footer() {
                 onMouseEnter={e => e.currentTarget.style.color = '#d4af37'}
                 onMouseLeave={e => e.currentTarget.style.color = ''}
               >Menu</Link>
-              <Link href="/event" style={{ color: 'var(--text-secondary)', fontSize: '14px', transition: 'all 0.3s' }}
+              <Link href="/promo" style={{ color: 'var(--text-secondary)', fontSize: '14px', transition: 'all 0.3s' }}
                 onMouseEnter={e => e.currentTarget.style.color = '#d4af37'}
                 onMouseLeave={e => e.currentTarget.style.color = ''}
-              >Event</Link>
+              >Promo</Link>
               <Link href="/book" style={{ color: 'var(--text-secondary)', fontSize: '14px', transition: 'all 0.3s' }}
                 onMouseEnter={e => e.currentTarget.style.color = '#d4af37'}
                 onMouseLeave={e => e.currentTarget.style.color = ''}

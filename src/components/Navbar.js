@@ -65,9 +65,9 @@ export default function Navbar() {
                   Menu {isActive('/menu') && <span className="sr-only">(saat ini)</span>}
                 </Link>
               </li>
-              <li className={`nav-item ${isActive('/event') ? 'active' : ''}`}>
-                <Link className="nav-link" href="/event" onClick={() => setIsOpen(false)}>
-                  Event {isActive('/event') && <span className="sr-only">(saat ini)</span>}
+              <li className={`nav-item ${isActive('/promo') ? 'active' : ''}`}>
+                <Link className="nav-link" href="/promo" onClick={() => setIsOpen(false)}>
+                  Promo {isActive('/promo') && <span className="sr-only">(saat ini)</span>}
                 </Link>
               </li>
               <li className={`nav-item ${isActive('/book') ? 'active' : ''}`}>
