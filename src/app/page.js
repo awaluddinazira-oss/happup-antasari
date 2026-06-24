@@ -235,7 +235,7 @@ export default function Home() {
             <div className="promo-card" data-aos="fade-up">
               <span className="promo-badge">Birthday Special</span>
               <div className="promo-img-wrapper">
-                <img src="/images/promo-ultah.jpg" alt="Promo Ultah" />
+                <img src="/images/promo-ultah.jpg" alt="Promo Ulang Tahun" />
               </div>
               <div className="promo-info">
                 <div>
@@ -249,7 +249,7 @@ export default function Home() {
             </div>
 
             {/* Box Promo 2: Senin Murce */}
-            <div className="promo-card" data-aos="fade-up" data-aos-delay="150">
+            <div className="promo-card" data-aos="fade-up" data-aos-delay="100">
               <span className="promo-badge">Monday Deal</span>
               <div className="promo-img-wrapper">
                 <img src="/images/promo-senin.jpg" alt="Promo Senin Murce" />
@@ -258,6 +258,57 @@ export default function Home() {
                 <div>
                   <h4>Senin Murce</h4>
                   <p>Bernyanyi sepuasnya selama 3 Jam hanya dengan Rp 50.000,- setiap hari Senin. Cara terbaik memulai awal pekanmu!</p>
+                </div>
+                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
+                  Ambil Promo
+                </Link>
+              </div>
+            </div>
+
+            {/* Box Promo 3: Tanggal 22 */}
+            <div className="promo-card" data-aos="fade-up" data-aos-delay="200">
+              <span className="promo-badge">Monthly Deal</span>
+              <div className="promo-img-wrapper">
+                <img src="/images/promo-tgl22.jpg" alt="Promo Tanggal 22" />
+              </div>
+              <div className="promo-info">
+                <div>
+                  <h4>Promo Tanggal 22</h4>
+                  <p>Bernyanyi 1 Jam hanya Rp 22.000,- setiap tanggal 22 sepanjang hari (All Day). Berlaku dengan minimal check-in karaoke selama 2 Jam.</p>
+                </div>
+                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
+                  Ambil Promo
+                </Link>
+              </div>
+            </div>
+
+            {/* Box Promo 4: GRWM */}
+            <div className="promo-card" data-aos="fade-up" data-aos-delay="300">
+              <span className="promo-badge">Ladies Special</span>
+              <div className="promo-img-wrapper">
+                <img src="/images/promo-grwm.jpg" alt="Promo GRWM" />
+              </div>
+              <div className="promo-info">
+                <div>
+                  <h4>Girls Ready With Mic</h4>
+                  <p>Untuk kamu para cewek yang memakai Jersey Piala Dunia, nikmati GRATIS Karaoke selama 2 Jam setiap hari Selasa &amp; Rabu. No Jersey, No Party!</p>
+                </div>
+                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
+                  Ambil Promo
+                </Link>
+              </div>
+            </div>
+
+            {/* Box Promo 5: Telkomsel Poin */}
+            <div className="promo-card" data-aos="fade-up" data-aos-delay="400">
+              <span className="promo-badge">Telkomsel Special</span>
+              <div className="promo-img-wrapper">
+                <img src="/images/promo-telkomsel.png" alt="Promo Telkomsel Poin" />
+              </div>
+              <div className="promo-info">
+                <div>
+                  <h4>Diskon Telkomsel Poin</h4>
+                  <p>Tukarkan 3000 Telkomsel Poin untuk mendapatkan Diskon 2 Jam All Room &amp; Diskon 15% untuk Food &amp; Beverage. Ketik SMDHAPPY3K26 kirim SMS ke 777.</p>
                 </div>
                 <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
                   Ambil Promo
