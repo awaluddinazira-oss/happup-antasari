@@ -75,6 +75,7 @@ export const getFallbackMenuImage = (name) => {
     ['fanta', '/images/fanta.jpg'],
     ['sprite', '/images/sprite.jpg'],
     ['pokka', '/images/pokka-greetea.jpeg'],
+    ['pocari', '/images/pocari.jpg'],
     ['soda', '/images/soda-gembira.jpg'],
     ['krating', '/images/krating-deng.jpg'],
     ['yakult', '/images/Yakult.jpg'],
@@ -127,6 +128,7 @@ export const getMenuImageUrl = (imagePath) => {
     'promo-senin',
     'promo-ultah',
     'Nasi-Goreng-Ikan-Asin',
+    'pocari',
   ];
 
   const isLocal = localImageNames.some((name) => imagePath.includes(name));
@@ -236,6 +238,7 @@ export const getProductKnowledge = (name) => {
     ['sprite can', 'Soda lemon-lime dingin dalam kaleng.'],
     ['greensands', 'Minuman sparkling ringan dan menyegarkan.'],
     ['pokka green tea', 'Teh hijau kemasan dengan rasa ringan.'],
+    ['pocari sweat', 'Minuman isotonik menyegarkan untuk mengembalikan ion tubuh.'],
     ['soda gembira', 'Soda susu manis yang creamy dan segar.'],
     ['fanta susu', 'Perpaduan soda dan susu yang manis segar.'],
     ['krating daeng', 'Minuman energi dalam kemasan botol.'],
@@ -418,6 +421,7 @@ export const menuCategories = [
       createItem('Fanta Susu', 37000, 'FS', '/images/soda-gembira.jpg'),
       createItem('Krating Daeng', 32000, 'KD', '/images/krating-deng.jpg'),
       createItem('Yakult', 10000, 'YK', '/images/Yakult.jpg'),
+      createItem('Pocari Sweat', 25000, 'PS', '/images/pocari.jpg'),
     ],
   },
   {
