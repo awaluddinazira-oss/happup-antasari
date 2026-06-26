@@ -25,22 +25,10 @@ export default function Footer() {
           <div className="col-md-2 footer-col">
             <h4>Navigasi</h4>
             <div className="contact_link_box" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <Link href="/" style={{ color: 'var(--text-secondary)', fontSize: '14px', transition: 'all 0.3s' }}
-                onMouseEnter={e => e.currentTarget.style.color = '#d4af37'}
-                onMouseLeave={e => e.currentTarget.style.color = ''}
-              >Beranda</Link>
-              <Link href="/menu" style={{ color: 'var(--text-secondary)', fontSize: '14px', transition: 'all 0.3s' }}
-                onMouseEnter={e => e.currentTarget.style.color = '#d4af37'}
-                onMouseLeave={e => e.currentTarget.style.color = ''}
-              >Menu</Link>
-              <Link href="/promo" style={{ color: 'var(--text-secondary)', fontSize: '14px', transition: 'all 0.3s' }}
-                onMouseEnter={e => e.currentTarget.style.color = '#d4af37'}
-                onMouseLeave={e => e.currentTarget.style.color = ''}
-              >Promo</Link>
-              <Link href="/book" style={{ color: 'var(--text-secondary)', fontSize: '14px', transition: 'all 0.3s' }}
-                onMouseEnter={e => e.currentTarget.style.color = '#d4af37'}
-                onMouseLeave={e => e.currentTarget.style.color = ''}
-              >Reservasi</Link>
+              <Link href="/" className="footer-nav-link">Beranda</Link>
+              <Link href="/menu" className="footer-nav-link">Menu</Link>
+              <Link href="/promo" className="footer-nav-link">Promo</Link>
+              <Link href="/book" className="footer-nav-link">Reservasi</Link>
             </div>
           </div>
 
@@ -54,9 +42,8 @@ export default function Footer() {
                   href="https://www.google.com/maps/search/?api=1&query=Happy+Puppy+Antasari+Samarinda"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: 'var(--text-secondary)', fontSize: '13px', lineHeight: '1.6', transition: 'color 0.3s' }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#d4af37'}
-                  onMouseLeave={e => e.currentTarget.style.color = ''}
+                  className="footer-nav-link"
+                  style={{ lineHeight: '1.6' }}
                 >
                   Jl. P Antasari No.2, Air Putih, Samarinda Ulu, Kota Samarinda, Kaltim 75124
                 </a>
@@ -71,9 +58,7 @@ export default function Footer() {
                   href="https://www.google.com/maps/search/?api=1&query=Happy+Puppy+Antasari+Samarinda"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: 'var(--text-secondary)', fontSize: '13px', transition: 'color 0.3s' }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#d4af37'}
-                  onMouseLeave={e => e.currentTarget.style.color = ''}
+                  className="footer-nav-link"
                 >
                   Beri Ulasan di Google
                 </a>

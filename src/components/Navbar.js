@@ -38,7 +38,7 @@ export default function Navbar() {
         <nav className="navbar navbar-expand-lg custom_nav-container">
           <Link className="navbar-brand" href="/">
             <span>
-              <img src="/images/logo.png" alt="Happup Antassari" style={{ maxWidth: '140px' }} />
+              <img src="/images/logo.png" alt="Happup Antasari" style={{ maxWidth: '140px' }} />
             </span>
           </Link>
 

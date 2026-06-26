@@ -1858,3 +1858,191 @@ a, button, .btn, .btn1, .btn2, .box, .detail-box, .img-box, .nav-link {
   background: rgba(212, 175, 55, 0.3);
   color: #fff;
 }
+
+/* ==========================================
+   HERO GHOST BUTTON (Lihat Menu)
+   ========================================== */
+.hero-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.hero-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   FOOTER NAV LINKS (CSS hover, bukan JS)
+   ========================================== */
+.footer-nav-link {
+  color: var(--text-secondary);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.footer-nav-link:hover {
+  color: var(--gold);
+  padding-left: 4px;
+}
+
+/* ==========================================
+   FEEDBACK PAGE — ALERT BOX
+   ========================================== */
+.feedback-alert {
+  border-radius: 16px;
+  font-size: 14px;
+  background-color: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #d4af37;
+  margin-bottom: 30px;
+  padding: 16px 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ==========================================
+   FORM — INLINE VALIDATION ERROR
+   ========================================== */
+.form-error-msg {
+  display: block;
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: -14px;
+  margin-bottom: 16px;
+  padding-left: 4px;
+  font-family: 'Poppins', sans-serif;
+  animation: errorFadeIn 0.25s ease;
+}
+
+@keyframes errorFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.form-control.input-error {
+  border-color: rgba(255, 107, 107, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1) !important;
+}
+
+/* ==========================================
+   NOT FOUND (404) PAGE
+   ========================================== */
+.notfound_section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-bg);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.notfound_section .notfound-inner {
+  max-width: 560px;
+}
+
+.notfound_section .notfound-code {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(6rem, 20vw, 10rem);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.3));
+}
+
+.notfound_section .notfound-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.notfound_section .notfound-desc {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.notfound_section .notfound-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.notfound_section .notfound-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: #0d0f13;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  transition: var(--transition);
+  -webkit-text-fill-color: #0d0f13;
+}
+
+.notfound_section .notfound-home-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px var(--gold-glow);
+  color: #0d0f13;
+}
+
+.notfound_section .notfound-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.notfound_section .notfound-back-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.notfound_section .notfound-icon {
+  font-size: 60px;
+  display: block;
+  margin-bottom: 16px;
+  animation: notFoundFloat 3s ease-in-out infinite;
+}
+
+@keyframes notFoundFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}

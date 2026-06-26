@@ -8,14 +8,24 @@ export default function FeedbackPage() {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    const newErrors = {};
+    if (!name.trim()) newErrors.name = 'Nama lengkap wajib diisi.';
+    if (!message.trim()) newErrors.message = 'Pesan kritik & saran wajib diisi.';
+    return newErrors;
+  };
 
   const handleFeedbackSubmit = (e) => {
     e.preventDefault();
 
-    if (!name || !message) {
-      alert("Mohon isi Nama Lengkap dan Pesan terlebih dahulu.");
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
       return;
     }
+    setErrors({});
 
     const rawText = `Halo Admin Happy Puppy Antasari, saya ingin memberikan kritik dan saran:\n\n*Nama:* ${name}\n*No HP:* ${phone}\n*Email:* ${email}\n*Pesan:* ${message}\n\n_(Berikut adalah lampiran foto/video bukti dari saya jika ada)_`;
     const encodedText = encodeURIComponent(rawText);
@@ -41,32 +51,21 @@ export default function FeedbackPage() {
           </div>
           <div className="row">
             <div className="col-md-8 mx-auto">
-              <div 
-                className="alert alert-warning text-center" 
-                style={{
-                  borderRadius: '16px',
-                  fontSize: '14px',
-                  backgroundColor: 'rgba(212, 175, 55, 0.12)',
-                  border: '1px solid rgba(212, 175, 55, 0.3)',
-                  color: '#d4af37',
-                  marginBottom: '30px',
-                  padding: '16px',
-                  lineHeight: '1.6',
-                }}
-              >
+              <div className="feedback-alert">
                 <strong>Punya bukti foto atau video?</strong><br />
                 Silakan tuliskan pesannya di bawah ini, lalu Anda bisa melampirkan file buktinya (tombol 📎) <b>langsung di aplikasi WhatsApp</b> setelah menekan tombol Kirim.
               </div>
               <div className="form_container">
-                <form onSubmit={handleFeedbackSubmit}>
+                <form onSubmit={handleFeedbackSubmit} noValidate>
                   <div className="form-group">
                     <input 
                       type="text" 
-                      className="form-control"
-                      placeholder="Nama Lengkap" 
+                      className={`form-control${errors.name ? ' input-error' : ''}`}
+                      placeholder="Nama Lengkap *" 
                       value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      onChange={(e) => { setName(e.target.value); if (errors.name) setErrors(prev => ({ ...prev, name: '' })); }}
                     />
+                    {errors.name && <span className="form-error-msg">{errors.name}</span>}
                   </div>
                   <div className="form-group">
                     <input 
@@ -88,12 +87,13 @@ export default function FeedbackPage() {
                   </div>
                   <div className="form-group">
                     <textarea 
-                      className="form-control message-box" 
-                      placeholder="Tuliskan kritik dan saran Anda di sini..." 
+                      className={`form-control message-box${errors.message ? ' input-error' : ''}`}
+                      placeholder="Tuliskan kritik dan saran Anda di sini... *" 
                       value={message}
-                      onChange={(e) => setMessage(e.target.value)}
+                      onChange={(e) => { setMessage(e.target.value); if (errors.message) setErrors(prev => ({ ...prev, message: '' })); }}
                       style={{ height: '140px', padding: '16px', resize: 'none' }}
                     />
+                    {errors.message && <span className="form-error-msg">{errors.message}</span>}
                   </div>
                   <div className="btn_box" style={{ display: 'flex', justifyContent: 'center' }}>
                     <button type="submit" style={{ width: '100%', maxWidth: '280px' }}>

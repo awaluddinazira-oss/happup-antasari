@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const testimonials = [
   {
@@ -61,22 +61,28 @@ export default function ClientSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
-  const goTo = (index) => {
+  const goTo = useCallback((index) => {
     if (animating) return;
     setAnimating(true);
     setTimeout(() => {
       setActiveIndex(index);
       setAnimating(false);
     }, 300);
-  };
+  }, [animating]);
 
-  const handleNext = () => goTo((activeIndex + 1) % testimonials.length);
-  const handlePrev = () => goTo((activeIndex - 1 + testimonials.length) % testimonials.length);
+  const handleNext = useCallback(
+    () => goTo((activeIndex + 1) % testimonials.length),
+    [activeIndex, goTo]
+  );
+  const handlePrev = useCallback(
+    () => goTo((activeIndex - 1 + testimonials.length) % testimonials.length),
+    [activeIndex, goTo]
+  );
 
   useEffect(() => {
     const timer = setInterval(handleNext, 6500);
     return () => clearInterval(timer);
-  }, [activeIndex]);
+  }, [handleNext]);
 
   const t = testimonials[activeIndex];
 

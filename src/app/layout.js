@@ -12,6 +12,28 @@ export const metadata = {
   icons: {
     icon: '/images/favicon.png?v=2',
   },
+  openGraph: {
+    title: 'Happup Antasari — Karaoke Keluarga Terbaik di Samarinda',
+    description: 'Nikmati karaoke modern dengan room nyaman, sound berkualitas, pilihan makanan & minuman favorit, serta promo menarik setiap hari.',
+    url: 'https://happupantasari.com',
+    siteName: 'Happup Antasari',
+    images: [
+      {
+        url: '/images/og-preview.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Happy Puppy Antasari Karaoke Samarinda',
+      },
+    ],
+    locale: 'id_ID',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Happup Antasari — Karaoke Keluarga Terbaik di Samarinda',
+    description: 'Nikmati karaoke modern dengan room nyaman, sound berkualitas, pilihan makanan & minuman favorit, serta promo menarik setiap hari.',
+    images: ['/images/og-preview.jpg'],
+  },
 };
 
 export default function RootLayout({ children }) {

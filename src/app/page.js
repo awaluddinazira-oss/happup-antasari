@@ -95,30 +95,7 @@ export default function Home() {
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
                               </svg>
                             </Link>
-                            <Link href="/menu" style={{
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              gap: '8px',
-                              padding: '14px 32px',
-                              borderRadius: '50px',
-                              background: 'rgba(255,255,255,0.08)',
-                              border: '1px solid rgba(255,255,255,0.2)',
-                              color: '#ffffff',
-                              fontWeight: 600,
-                              fontFamily: 'Outfit, sans-serif',
-                              fontSize: '15px',
-                              backdropFilter: 'blur(10px)',
-                              transition: 'all 0.35s ease',
-                            }}
-                            onMouseEnter={e => {
-                              e.currentTarget.style.background = 'rgba(255,255,255,0.15)';
-                              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)';
-                            }}
-                            onMouseLeave={e => {
-                              e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
-                              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
-                            }}
-                            >
+                            <Link href="/menu" className="hero-btn-ghost">
                               Lihat Menu
                             </Link>
                           </div>
@@ -245,7 +222,12 @@ export default function Home() {
                         <p>{item.description}</p>
                         <div className="options">
                           <h6>{formatRupiah(item.price)}</h6>
-                          <Link href="/menu" className="btn-add-cart-link">+</Link>
+                          <button
+                            type="button"
+                            className="btn-add-cart-link"
+                            onClick={() => addToCart(item)}
+                            aria-label={`Tambah ${item.name} ke keranjang`}
+                          >+</button>
                         </div>
                       </div>
                     </div>
