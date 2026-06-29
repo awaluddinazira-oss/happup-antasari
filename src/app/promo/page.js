@@ -157,8 +157,25 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Box Promo 6: Alfagift */}
+            {/* Box Promo 6: Indomaret Poinku */}
             <div className="promo-card" data-aos="fade-up" data-aos-delay="500">
+              <span className="promo-badge">Indomaret Special</span>
+              <div className="promo-img-wrapper">
+                <img src="/images/promo-indomaret.jpg" alt="Promo Indomaret Poinku Karaoke 1 Jam" />
+              </div>
+              <div className="promo-info">
+                <div>
+                  <h4>Gratis Voucher Karaoke 1 Jam</h4>
+                  <p>Tukarkan <strong>200 Poin</strong> <strong>Indomaret Poinku</strong> dan dapatkan <strong>GRATIS Voucher Karaoke 1 Jam</strong> di Happy Puppy Antasari. *Syarat &amp; Ketentuan Berlaku.</p>
+                </div>
+                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
+                  Ambil Promo
+                </Link>
+              </div>
+            </div>
+
+            {/* Box Promo 7: Alfagift */}
+            <div className="promo-card" data-aos="fade-up" data-aos-delay="600">
               <span className="promo-badge">Alfamart Special</span>
               <div className="promo-img-wrapper">
                 <img src="/images/promo-alfagift.jpg" alt="Promo Alfagift Karaoke 1 Jam" />
