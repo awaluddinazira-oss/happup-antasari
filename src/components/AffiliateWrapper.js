@@ -14,7 +14,12 @@ const shopeeLinks = [
   "https://s.shopee.co.id/4VaJt3mDU5",
   "https://s.shopee.co.id/8V6SeOp846",
   "https://s.shopee.co.id/6VLOGiON0c",
-  "https://s.shopee.co.id/4AxTUPkr8b"
+  "https://s.shopee.co.id/4AxTUPkr8b",
+  "https://s.shopee.co.id/5L9xtVXTQ9",
+  "https://s.shopee.co.id/5q6EUQVZPG",
+  "https://s.shopee.co.id/5fmoI7WCkF",
+  "https://s.shopee.co.id/6Aj4t2UIjM",
+  "https://s.shopee.co.id/60PegjUw4L"
 ];
 
 function openShopeeLink() {

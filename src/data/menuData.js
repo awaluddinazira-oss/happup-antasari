@@ -25,6 +25,11 @@ export const outlet = {
     'https://s.shopee.co.id/8pjFISaNHR',
     'https://s.shopee.co.id/17qmCDpQJ',
     'https://s.shopee.co.id/1VweYw7Hhq',
+    'https://s.shopee.co.id/5L9xtVXTQ9',
+    'https://s.shopee.co.id/5q6EUQVZPG',
+    'https://s.shopee.co.id/5fmoI7WCkF',
+    'https://s.shopee.co.id/6Aj4t2UIjM',
+    'https://s.shopee.co.id/60PegjUw4L',
   ],
 };
 
