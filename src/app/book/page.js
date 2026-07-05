@@ -148,15 +148,15 @@ export default function BookPage() {
                         <option value="Paket Nyambar">Paket Nyambar</option>
                       </optgroup>
                       <optgroup label="— Promo Khusus —">
-                        <option value="Promo Ulang Tahun">🎂 Promo Ulang Tahun</option>
-                        <option value="Promo Senin Murce">🎵 Senin Murce</option>
-                        <option value="Promo Tanggal 22">🎉 Promo Tanggal 22</option>
-                        <option value="Promo GRWM">💄 Girls Ready With Mic (GRWM)</option>
+                        <option value="Promo Ulang Tahun">Promo Ulang Tahun</option>
+                        <option value="Promo Senin Murce">Senin Murce</option>
+                        <option value="Promo Tanggal 22">Promo Tanggal 22</option>
+                        <option value="Promo GRWM">Girls Ready With Mic (GRWM)</option>
                       </optgroup>
                       <optgroup label="— Promo Mitra —">
-                        <option value="Promo Telkomsel Poin">📱 Diskon Telkomsel Poin</option>
-                        <option value="Promo Indomaret Poinku">🏪 Indomaret Poinku</option>
-                        <option value="Promo Alfagift">🛒 Alfagift</option>
+                        <option value="Promo Telkomsel Poin">Diskon Telkomsel Poin</option>
+                        <option value="Promo Indomaret Poinku">Indomaret Poinku</option>
+                        <option value="Promo Alfagift">Alfagift</option>
                       </optgroup>
                     </select>
                   </div>
