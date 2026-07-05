@@ -41,6 +41,17 @@ export default function BookPage() {
       filtered = allRooms.filter(r => r.value === 'Small' || r.value === 'Medium');
     } else if (pkg === 'Paket Nyambar') {
       filtered = allRooms.filter(r => r.value !== 'Royal Suite');
+    } else if (
+      pkg === 'Promo Tanggal 22' ||
+      pkg === 'Promo GRWM' ||
+      pkg === 'Promo Telkomsel Poin' ||
+      pkg === 'Promo Indomaret Poinku' ||
+      pkg === 'Promo Alfagift'
+    ) {
+      // Promo mitra & khusus: maks sampai Junior Suite
+      filtered = allRooms.filter(r =>
+        r.value === 'Small' || r.value === 'Medium' || r.value === 'Large' || r.value === 'Junior Suite'
+      );
     }
     setAllowedRooms(filtered);
 
@@ -128,12 +139,25 @@ export default function BookPage() {
                       aria-required="true"
                     >
                       <option value="">Jenis Paket</option>
-                      <option value="Normal">Normal</option>
-                      <option value="Paket Nyantui">Paket Nyantui</option>
-                      <option value="Paket Nyambar">Paket Nyambar</option>
-                      <option value="Paket Mode Game">Paket Mode Game</option>
-                      <option value="Promo Ulang Tahun">Promo Ulang Tahun</option>
-                      <option value="Promo Senin Murce">Promo Senin Murce</option>
+                      <optgroup label="— Reguler —">
+                        <option value="Normal">Normal</option>
+                      </optgroup>
+                      <optgroup label="— Paket Karaoke —">
+                        <option value="Paket Nyantui">Paket Nyantui</option>
+                        <option value="Paket Mode Game">Paket Mode Game</option>
+                        <option value="Paket Nyambar">Paket Nyambar</option>
+                      </optgroup>
+                      <optgroup label="— Promo Khusus —">
+                        <option value="Promo Ulang Tahun">🎂 Promo Ulang Tahun</option>
+                        <option value="Promo Senin Murce">🎵 Senin Murce</option>
+                        <option value="Promo Tanggal 22">🎉 Promo Tanggal 22</option>
+                        <option value="Promo GRWM">💄 Girls Ready With Mic (GRWM)</option>
+                      </optgroup>
+                      <optgroup label="— Promo Mitra —">
+                        <option value="Promo Telkomsel Poin">📱 Diskon Telkomsel Poin</option>
+                        <option value="Promo Indomaret Poinku">🏪 Indomaret Poinku</option>
+                        <option value="Promo Alfagift">🛒 Alfagift</option>
+                      </optgroup>
                     </select>
                   </div>
                   <div className="form-group">
