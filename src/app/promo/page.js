@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 
@@ -9,7 +10,7 @@ export default function AboutPage() {
     <main className="sub_page">
       <div className="hero_area">
         <div className="bg-box">
-          <img src="/images/hero-bg.jpg" alt="Hero background" />
+          <Image src="/images/hero-bg.jpg" alt="Hero background" fill style={{ objectFit: 'cover' }} priority />
         </div>
         <Navbar />
       </div>
@@ -20,7 +21,7 @@ export default function AboutPage() {
           <div className="row">
             <div className="col-md-6">
               <div className="img-box">
-                <img src="/images/abaut-img.jpg" alt="About" style={{ borderRadius: '15px', width: '100%' }} />
+                <Image src="/images/abaut-img.jpg" alt="About" width={540} height={420} style={{ borderRadius: '15px', width: '100%', height: 'auto' }} />
               </div>
             </div>
             <div className="col-md-6">
@@ -50,12 +51,12 @@ export default function AboutPage() {
           <div className="row mt-5">
             <div className="col-md-6 mb-4" data-aos="zoom-in-up" data-aos-delay="0">
               <div className="img-box text-center">
-                <img src="/images/Happy-hour.jpeg" alt="Happy Hour" className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%' }} />
+                <Image src="/images/Happy-hour.jpeg" alt="Happy Hour" width={600} height={400} className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%', height: 'auto' }} />
               </div>
             </div>
             <div className="col-md-6 mb-4" data-aos="zoom-in-up" data-aos-delay="150">
               <div className="img-box text-center">
-                <img src="/images/harga-room.jpeg" alt="Harga Room" className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%' }} />
+                <Image src="/images/harga-room.jpeg" alt="Harga Room" width={600} height={400} className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%', height: 'auto' }} />
               </div>
             </div>
           </div>
@@ -76,7 +77,7 @@ export default function AboutPage() {
             <div className="promo-card" data-aos="fade-up">
               <span className="promo-badge">Birthday Special</span>
               <div className="promo-img-wrapper">
-                <img src="/images/promo-ultah.jpg" alt="Promo Ulang Tahun" />
+                <Image src="/images/promo-ultah.jpg" alt="Promo Ulang Tahun" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div className="promo-info">
                 <div>
@@ -93,7 +94,7 @@ export default function AboutPage() {
             <div className="promo-card" data-aos="fade-up" data-aos-delay="100">
               <span className="promo-badge">Monday Deal</span>
               <div className="promo-img-wrapper">
-                <img src="/images/promo-senin.jpg" alt="Promo Senin Murce" />
+                <Image src="/images/promo-senin.jpg" alt="Promo Senin Murce" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div className="promo-info">
                 <div>
@@ -110,7 +111,7 @@ export default function AboutPage() {
             <div className="promo-card" data-aos="fade-up" data-aos-delay="200">
               <span className="promo-badge">Monthly Deal</span>
               <div className="promo-img-wrapper">
-                <img src="/images/promo-tgl22.jpg" alt="Promo Tanggal 22" />
+                <Image src="/images/promo-tgl22.jpg" alt="Promo Tanggal 22" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div className="promo-info">
                 <div>
@@ -127,7 +128,7 @@ export default function AboutPage() {
             <div className="promo-card" data-aos="fade-up" data-aos-delay="300">
               <span className="promo-badge">Ladies Special</span>
               <div className="promo-img-wrapper">
-                <img src="/images/promo-grwm.jpg" alt="Promo GRWM" />
+                <Image src="/images/promo-grwm.jpg" alt="Promo GRWM" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div className="promo-info">
                 <div>
@@ -144,7 +145,7 @@ export default function AboutPage() {
             <div className="promo-card" data-aos="fade-up" data-aos-delay="400">
               <span className="promo-badge">Telkomsel Special</span>
               <div className="promo-img-wrapper">
-                <img src="/images/promo-telkomsel.png" alt="Promo Telkomsel Poin" />
+                <Image src="/images/promo-telkomsel.png" alt="Promo Telkomsel Poin" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div className="promo-info">
                 <div>
@@ -161,7 +162,7 @@ export default function AboutPage() {
             <div className="promo-card" data-aos="fade-up" data-aos-delay="500">
               <span className="promo-badge">Indomaret Special</span>
               <div className="promo-img-wrapper">
-                <img src="/images/promo-indomaret.jpg" alt="Promo Indomaret Poinku Karaoke 1 Jam" />
+                <Image src="/images/promo-indomaret.jpg" alt="Promo Indomaret Poinku Karaoke 1 Jam" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div className="promo-info">
                 <div>
@@ -178,7 +179,7 @@ export default function AboutPage() {
             <div className="promo-card" data-aos="fade-up" data-aos-delay="600">
               <span className="promo-badge">Alfamart Special</span>
               <div className="promo-img-wrapper">
-                <img src="/images/promo-alfagift.jpg" alt="Promo Alfagift Karaoke 1 Jam" />
+                <Image src="/images/promo-alfagift.jpg" alt="Promo Alfagift Karaoke 1 Jam" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div className="promo-info">
                 <div>
@@ -204,17 +205,17 @@ export default function AboutPage() {
           <div className="row mt-5">
             <div className="col-md-6 col-lg-4 mb-4" data-aos="zoom-in-up" data-aos-delay="0">
               <div className="img-box text-center">
-                <img src="/images/Paket-nyantui.png" alt="Paket Nyantui" className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%', maxWidth: '500px' }} />
+                <Image src="/images/Paket-nyantui.png" alt="Paket Nyantui" width={500} height={400} className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%', height: 'auto', maxWidth: '500px' }} />
               </div>
             </div>
             <div className="col-md-6 col-lg-4 mb-4" data-aos="zoom-in-up" data-aos-delay="150">
               <div className="img-box text-center">
-                <img src="/images/Paket-hepimode-game.png" alt="Paket Hepi Mode Game" className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%', maxWidth: '500px' }} />
+                <Image src="/images/Paket-hepimode-game.png" alt="Paket Hepi Mode Game" width={500} height={400} className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%', height: 'auto', maxWidth: '500px' }} />
               </div>
             </div>
             <div className="col-md-6 col-lg-4 mb-4" data-aos="zoom-in-up" data-aos-delay="300">
               <div className="img-box text-center">
-                <img src="/images/Paket-nyambar.png?v=2" alt="Paket Nyambar" className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%', maxWidth: '500px' }} />
+                <Image src="/images/Paket-nyambar.png" alt="Paket Nyambar" width={500} height={400} className="img-fluid shadow-lg" style={{ borderRadius: '15px', width: '100%', height: 'auto', maxWidth: '500px' }} />
               </div>
             </div>
           </div>

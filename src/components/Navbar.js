@@ -70,6 +70,11 @@ export default function Navbar() {
                   Promo {isActive('/promo') && <span className="sr-only">(saat ini)</span>}
                 </Link>
               </li>
+              <li className={`nav-item ${isActive('/galeri') ? 'active' : ''}`}>
+                <Link className="nav-link" href="/galeri" onClick={() => setIsOpen(false)}>
+                  Galeri {isActive('/galeri') && <span className="sr-only">(saat ini)</span>}
+                </Link>
+              </li>
               <li className={`nav-item ${isActive('/book') ? 'active' : ''}`}>
                 <Link className="nav-link" href="/book" onClick={() => setIsOpen(false)}>
                   Reservasi Room {isActive('/book') && <span className="sr-only">(saat ini)</span>}

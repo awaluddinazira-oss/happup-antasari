@@ -33,52 +33,104 @@ function openShopeeLink() {
   setTimeout(() => document.body.removeChild(a), 100);
 }
 
+// Elemen interaktif yang TIDAK boleh memicu affiliate
+const INTERACTIVE_SELECTORS = 'a, button, input, select, textarea, label, .nice-select, .btn-add-cart-link, [role="button"], .room-picker-right, #pageRoomNumber, .room-select-group, .carousel-indicators li, .nav-link, .navbar-toggler';
+
 export default function AffiliateWrapper({ children }) {
   useEffect(() => {
     const handleGlobalClick = (e) => {
-      // 1. Room picker card (excluding room-picker-right container with select options)
-      const roomPickerCard = e.target.closest('.room-picker-card');
-      if (roomPickerCard) {
-        const roomPickerRight = e.target.closest('.room-picker-right') || e.target.closest('#pageRoomNumber') || e.target.closest('.room-select-group');
-        if (!roomPickerRight) {
-          openShopeeLink();
-          return;
-        }
+      // Jangan pernah trigger jika klik pada elemen interaktif
+      if (e.target.closest(INTERACTIVE_SELECTORS)) return;
+
+      // ── 1. Room picker card (area non-interaktif) ──
+      if (e.target.closest('.room-picker-card')) {
+        openShopeeLink();
+        return;
       }
 
-      // 2. Footer logo or navbar brand link
-      const logoOrBrand = e.target.closest('.footer-logo') || e.target.closest('.navbar-brand');
-      if (logoOrBrand) {
+      // ── 2. Footer logo / navbar brand ──
+      if (e.target.closest('.footer-logo') || e.target.closest('.navbar-brand')) {
         e.preventDefault();
         openShopeeLink();
         return;
       }
 
-      // 3. Offer section boxes (excluding standard <a> links inside them)
-      const offerBox = e.target.closest('.offer_section .box');
-      if (offerBox) {
-        const link = e.target.closest('a');
-        if (!link) {
-          openShopeeLink();
-          return;
-        }
-      }
-
-      // 4. Map container
-      const mapContainer = e.target.closest('.map_container');
-      if (mapContainer) {
+      // ── 3. Offer section boxes (area non-link) ──
+      if (e.target.closest('.offer_section .box')) {
         openShopeeLink();
         return;
       }
 
-      // 5. Book section outside fields
-      const bookSection = e.target.closest('.book_section');
-      if (bookSection) {
-        const activeFields = e.target.closest('input, select, button, a, .nice-select, .map_container');
-        if (!activeFields) {
-          openShopeeLink();
-          return;
-        }
+      // ── 4. Map container ──
+      if (e.target.closest('.map_container')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 5. Book section (area kosong, bukan field/tombol) ──
+      if (e.target.closest('.book_section')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 6. Gambar makanan/menu di homepage & halaman menu ──
+      if (e.target.closest('.food_section .img-box') || e.target.closest('.food_section .box')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 7. About section — gambar & badges ──
+      if (e.target.closest('.about_section .img-box') || e.target.closest('.about_badge') || e.target.closest('.about_badges')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 8. Testimonial / client section (area background) ──
+      if (e.target.closest('.client_section') || e.target.closest('.client_container') || e.target.closest('.client_item')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 9. Hero slider background (klik area background, bukan tombol) ──
+      if (e.target.closest('.hero_area') || e.target.closest('.bg-box') || e.target.closest('.slider_section')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 10. Promo section — gambar promo ──
+      if (e.target.closest('.promo_section') || e.target.closest('.promo-card') || e.target.closest('.promo-img')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 11. Galeri — gambar room card & stats ──
+      if (e.target.closest('.room-type-card-image') || e.target.closest('.galeri-stat-card')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 12. Footer (area umum, bukan link) ──
+      if (e.target.closest('footer') || e.target.closest('.footer_section')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 13. Section heading / intro area (klik judul/teks) ──
+      if (e.target.closest('.heading_container') || e.target.closest('.galeri_intro')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 14. Stats / badge section di homepage ──
+      if (e.target.closest('.about_badge') || e.target.closest('.hero-eyebrow')) {
+        openShopeeLink();
+        return;
+      }
+
+      // ── 15. Semua gambar (img tag) yang bukan di dalam link/tombol ──
+      if (e.target.tagName === 'IMG') {
+        openShopeeLink();
+        return;
       }
     };
 

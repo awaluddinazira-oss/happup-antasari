@@ -50,6 +50,58 @@ export default function RootLayout({ children }) {
         {/* Custom styles */}
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
         <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'EntertainmentBusiness',
+              name: 'Happy Puppy Antasari',
+              alternateName: 'Happup Antasari',
+              description: 'Tempat karaoke keluarga terbaik di Samarinda dengan fasilitas modern, pilihan lagu terlengkap, dan suasana nyaman.',
+              url: 'https://happupantasari.com',
+              telephone: '+6282148004822',
+              email: 'happup.samarinda.antasari@gmail.com',
+              image: 'https://happupantasari.com/images/og-preview.jpg',
+              logo: 'https://happupantasari.com/images/logo.png',
+              priceRange: 'Rp 100.000 – Rp 500.000',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Jl. P Antasari No.2, Air Putih',
+                addressLocality: 'Samarinda',
+                addressRegion: 'Kalimantan Timur',
+                postalCode: '75124',
+                addressCountry: 'ID',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: -0.4941927,
+                longitude: 117.1470192,
+              },
+              openingHoursSpecification: [
+                {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+                  opens: '11:00',
+                  closes: '02:00',
+                },
+              ],
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.8',
+                bestRating: '5',
+                worstRating: '1',
+                ratingCount: '200',
+              },
+              sameAs: [
+                'https://www.instagram.com/happup.samarinda.antasari/',
+                'https://www.facebook.com/happup.samarinda.antasari/',
+                'https://www.tiktok.com/@happupantasari',
+              ],
+            }),
+          }}
+        />
       </head>
       <body>
         <CartProvider>

@@ -1,7 +1,9 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { SITE_CONFIG } from '@/data/siteConfig';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,7 +16,7 @@ export default function Footer() {
           {/* Brand + Desc */}
           <div className="col-md-4 footer-col" style={{ marginBottom: '28px' }}>
             <Link href="/" className="footer-logo d-inline-block" style={{ marginBottom: '12px' }}>
-              <img src="/images/logo.png" alt="Happy Puppy" style={{ maxWidth: '110px', borderRadius: '12px' }} />
+              <Image src="/images/logo.png" alt="Happy Puppy" width={110} height={110} style={{ maxWidth: '110px', borderRadius: '12px', height: 'auto' }} />
             </Link>
             <p style={{ maxWidth: '260px', lineHeight: '1.8' }}>
               Tempat karaoke keluarga terbaik di Samarinda. Fasilitas modern, lagu terlengkap, harga terjangkau.
@@ -28,6 +30,7 @@ export default function Footer() {
               <Link href="/" className="footer-nav-link">Beranda</Link>
               <Link href="/menu" className="footer-nav-link">Menu</Link>
               <Link href="/promo" className="footer-nav-link">Promo</Link>
+              <Link href="/galeri" className="footer-nav-link">Galeri</Link>
               <Link href="/book" className="footer-nav-link">Reservasi</Link>
             </div>
           </div>
@@ -70,7 +73,7 @@ export default function Footer() {
           <div className="col-md-3 footer-col">
             <h4>Ikuti Kami</h4>
             <div className="footer_social">
-              <a href="https://wa.me/6282148004822" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+              <a href={`https://wa.me/${SITE_CONFIG.waReservasi}`} target="_blank" rel="noopener noreferrer" title="WhatsApp">
                 <i className="fa fa-whatsapp" aria-hidden="true"></i>
               </a>
               <a href="https://www.instagram.com/happup.samarinda.antasari/" target="_blank" rel="noopener noreferrer" title="Instagram">
@@ -88,7 +91,7 @@ export default function Footer() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/6282148004822"
+              href={`https://wa.me/${SITE_CONFIG.waReservasi}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{

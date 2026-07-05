@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import ClientSlider from '@/components/ClientSlider';
@@ -71,7 +72,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <div className="hero_area">
         <div className="bg-box">
-          <img src="/images/hero-bg.jpg" alt="Hero background" />
+          <Image src="/images/hero-bg.jpg" alt="Hero background" fill style={{ objectFit: 'cover' }} priority />
         </div>
         <Navbar />
 
@@ -210,6 +211,9 @@ export default function Home() {
                         <img
                           src={getMenuImageUrl(item.image)}
                           alt={item.name}
+                          width={300}
+                          height={220}
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                           onError={(e) => {
                             e.target.onerror = null;
                             e.target.style.display = 'none';
@@ -254,7 +258,7 @@ export default function Home() {
           <div className="row">
             <div className="col-md-6" data-aos="fade-right">
               <div className="img-box">
-                <img src="/images/abaut-img.jpg" alt="About Happup" />
+                <Image src="/images/abaut-img.jpg" alt="About Happup Antasari" width={540} height={420} style={{ width: '100%', height: 'auto', borderRadius: '12px' }} />
               </div>
             </div>
             <div className="col-md-6" data-aos="fade-left">
