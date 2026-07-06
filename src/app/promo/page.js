@@ -1,11 +1,41 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 
+const seninMurceSlides = [
+  { src: '/images/ketentuan-murce.jpeg', alt: 'Ketentuan Promo Senin Murce', caption: 'Ketentuan Promo' },
+  { src: '/images/syarat-murce.jpeg',   alt: 'Syarat Minimal Order Senin Murce', caption: 'Syarat Minimal Order' },
+];
+
+const grwmSlides = [
+  { src: '/images/syarat-grwm.jpeg', alt: 'Syarat & Ketentuan Girls Ready With Mic', caption: 'Syarat & Ketentuan GRWM' },
+];
+
 export default function AboutPage() {
+  const [activeSlides, setActiveSlides] = useState([]);
+  const [modalOpen, setModalOpen]       = useState(false);
+  const [slideIndex, setSlideIndex]     = useState(0);
+
+  const openModal = (slides, idx = 0) => { setActiveSlides(slides); setSlideIndex(idx); setModalOpen(true); };
+  const closeModal = () => setModalOpen(false);
+  const prev = () => setSlideIndex(i => (i - 1 + activeSlides.length) % activeSlides.length);
+  const next = () => setSlideIndex(i => (i + 1) % activeSlides.length);
+
+  const handleKey = useCallback((e) => {
+    if (!modalOpen) return;
+    if (e.key === 'Escape')     closeModal();
+    if (e.key === 'ArrowLeft')  prev();
+    if (e.key === 'ArrowRight') next();
+  }, [modalOpen, activeSlides]);
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [handleKey]);
+
   return (
     <main className="sub_page">
       <div className="hero_area">
@@ -93,17 +123,40 @@ export default function AboutPage() {
             {/* Box Promo 2: Senin Murce */}
             <div className="promo-card" data-aos="fade-up" data-aos-delay="100">
               <span className="promo-badge">Monday Deal</span>
-              <div className="promo-img-wrapper">
+              <div className="promo-img-wrapper" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => openModal(seninMurceSlides, 0)}>
                 <Image src="/images/promo-senin.jpg" alt="Promo Senin Murce" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
+                <div style={{
+                  position: 'absolute', inset: 0,
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)',
+                  borderRadius: '12px 12px 0 0',
+                  display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
+                  paddingBottom: '12px', opacity: 0, transition: 'opacity .25s',
+                }} className="promo-img-overlay">
+                  <span style={{ color: '#fff', fontSize: '13px', fontWeight: 600, letterSpacing: '0.5px', background: 'rgba(255,255,255,0.18)', backdropFilter: 'blur(6px)', borderRadius: '20px', padding: '5px 14px' }}>🔍 Lihat Detail</span>
+                </div>
               </div>
               <div className="promo-info">
                 <div>
                   <h4>Senin Murce</h4>
                   <p>Bernyanyi sepuasnya selama 3 Jam hanya dengan Rp 50.000,- setiap hari Senin. Cara terbaik memulai awal pekanmu!</p>
                 </div>
-                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
-                  Ambil Promo
-                </Link>
+                <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
+                  <button
+                    onClick={() => openModal(seninMurceSlides, 0)}
+                    style={{
+                      width: '100%', padding: '10px', borderRadius: '8px', border: '2px solid #f5a623',
+                      background: 'transparent', color: '#f5a623', fontWeight: 700, fontSize: '14px',
+                      cursor: 'pointer', transition: 'all .2s',
+                    }}
+                    onMouseOver={e => { e.currentTarget.style.background='#f5a623'; e.currentTarget.style.color='#fff'; }}
+                    onMouseOut={e  => { e.currentTarget.style.background='transparent'; e.currentTarget.style.color='#f5a623'; }}
+                  >
+                    📋 Ketentuan &amp; Syarat
+                  </button>
+                  <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
+                    Ambil Promo
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -127,17 +180,40 @@ export default function AboutPage() {
             {/* Box Promo 4: GRWM */}
             <div className="promo-card" data-aos="fade-up" data-aos-delay="300">
               <span className="promo-badge">Ladies Special</span>
-              <div className="promo-img-wrapper">
+              <div className="promo-img-wrapper" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => openModal(grwmSlides, 0)}>
                 <Image src="/images/promo-grwm.jpg" alt="Promo GRWM" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
+                <div style={{
+                  position: 'absolute', inset: 0,
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)',
+                  borderRadius: '12px 12px 0 0',
+                  display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
+                  paddingBottom: '12px', opacity: 0, transition: 'opacity .25s',
+                }} className="promo-img-overlay">
+                  <span style={{ color: '#fff', fontSize: '13px', fontWeight: 600, letterSpacing: '0.5px', background: 'rgba(255,255,255,0.18)', backdropFilter: 'blur(6px)', borderRadius: '20px', padding: '5px 14px' }}>🔍 Lihat Detail</span>
+                </div>
               </div>
               <div className="promo-info">
                 <div>
                   <h4>Girls Ready With Mic</h4>
                   <p>Untuk kamu para cewek yang memakai Jersey Piala Dunia, nikmati GRATIS Karaoke selama 2 Jam setiap hari Selasa &amp; Rabu. No Jersey, No Party!</p>
                 </div>
-                <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
-                  Ambil Promo
-                </Link>
+                <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
+                  <button
+                    onClick={() => openModal(grwmSlides, 0)}
+                    style={{
+                      width: '100%', padding: '10px', borderRadius: '8px', border: '2px solid #27ae60',
+                      background: 'transparent', color: '#27ae60', fontWeight: 700, fontSize: '14px',
+                      cursor: 'pointer', transition: 'all .2s',
+                    }}
+                    onMouseOver={e => { e.currentTarget.style.background='#27ae60'; e.currentTarget.style.color='#fff'; }}
+                    onMouseOut={e  => { e.currentTarget.style.background='transparent'; e.currentTarget.style.color='#27ae60'; }}
+                  >
+                    📋 Syarat &amp; Ketentuan
+                  </button>
+                  <Link href="/book" className="btn1" style={{ width: '100%', justifyContent: 'center' }}>
+                    Ambil Promo
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -221,6 +297,111 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      {/* ── Modal Promo ── */}
+      {modalOpen && activeSlides.length > 0 && (
+        <div
+          onClick={closeModal}
+          style={{
+            position: 'fixed', inset: 0, zIndex: 9999,
+            background: 'rgba(0,0,0,0.82)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            padding: '16px',
+            animation: 'fadeIn .2s ease',
+          }}
+        >
+          <style>{`
+            @keyframes fadeIn  { from { opacity:0 } to { opacity:1 } }
+            @keyframes slideUp { from { opacity:0; transform:translateY(30px) } to { opacity:1; transform:translateY(0) } }
+            .promo-img-overlay { opacity: 0; transition: opacity .25s; }
+            .promo-img-wrapper:hover .promo-img-overlay { opacity: 1 !important; }
+          `}</style>
+
+          {/* modal box */}
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{
+              position: 'relative', maxWidth: '480px', width: '100%',
+              borderRadius: '20px', overflow: 'hidden',
+              boxShadow: '0 30px 80px rgba(0,0,0,0.6)',
+              animation: 'slideUp .25s ease',
+            }}
+          >
+            {/* close */}
+            <button
+              onClick={closeModal}
+              style={{
+                position: 'absolute', top: '12px', right: '12px', zIndex: 10,
+                width: '36px', height: '36px', borderRadius: '50%',
+                background: 'rgba(0,0,0,0.55)', border: 'none',
+                color: '#fff', fontSize: '18px', cursor: 'pointer', lineHeight: 1,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}
+              aria-label="Tutup modal"
+            >✕</button>
+
+            {/* image */}
+            <Image
+              src={activeSlides[slideIndex].src}
+              alt={activeSlides[slideIndex].alt}
+              width={480}
+              height={600}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+              priority
+            />
+
+            {/* caption + nav */}
+            <div style={{
+              background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+              padding: '16px 20px',
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            }}>
+              {/* prev */}
+              <button
+                onClick={prev}
+                disabled={activeSlides.length <= 1}
+                style={{
+                  background: 'rgba(255,255,255,0.12)', border: 'none',
+                  color: '#fff', width: '36px', height: '36px', borderRadius: '50%',
+                  fontSize: '18px', cursor: 'pointer', flexShrink: 0,
+                }}
+              >‹</button>
+
+              {/* caption + dots */}
+              <div style={{ textAlign: 'center', flex: 1, padding: '0 12px' }}>
+                <p style={{ color: '#fff', fontWeight: 700, margin: 0, fontSize: '15px' }}>
+                  {activeSlides[slideIndex].caption}
+                </p>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', marginTop: '8px' }}>
+                  {activeSlides.map((_, i) => (
+                    <span
+                      key={i}
+                      onClick={() => setSlideIndex(i)}
+                      style={{
+                        width: i === slideIndex ? '20px' : '8px',
+                        height: '8px', borderRadius: '4px',
+                        background: i === slideIndex ? '#f5a623' : 'rgba(255,255,255,0.35)',
+                        cursor: 'pointer', transition: 'all .3s',
+                        display: 'inline-block',
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* next */}
+              <button
+                onClick={next}
+                disabled={activeSlides.length <= 1}
+                style={{
+                  background: 'rgba(255,255,255,0.12)', border: 'none',
+                  color: '#fff', width: '36px', height: '36px', borderRadius: '50%',
+                  fontSize: '18px', cursor: 'pointer', flexShrink: 0,
+                }}
+              >›</button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
