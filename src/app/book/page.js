@@ -159,6 +159,11 @@ export default function BookPage() {
                         <option value="Promo Alfagift">Alfagift</option>
                       </optgroup>
                     </select>
+                    <div style={{ display: 'flex', gap: '10px', marginTop: '8px', fontSize: '11.5px', color: '#888', flexWrap: 'wrap' }}>
+                      <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>🌤️ <strong style={{ color: '#555' }}>Siang</strong>&nbsp;11:00 – 17:45</span>
+                      <span style={{ color: '#ccc' }}>|</span>
+                      <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>🌙 <strong style={{ color: '#555' }}>Malam</strong>&nbsp;18:00 – Close</span>
+                    </div>
                   </div>
                   <div className="form-group">
                     <label htmlFor="book-room" className="form-label-a11y">Pilih Room</label>
