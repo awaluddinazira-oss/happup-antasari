@@ -19,7 +19,12 @@ const shopeeLinks = [
   "https://s.shopee.co.id/5q6EUQVZPG",
   "https://s.shopee.co.id/5fmoI7WCkF",
   "https://s.shopee.co.id/6Aj4t2UIjM",
-  "https://s.shopee.co.id/60PegjUw4L"
+  "https://s.shopee.co.id/60PegjUw4L",
+  "https://s.shopee.co.id/5AqmDlp98q",
+  "https://s.shopee.co.id/50XM1SpmTp",
+  "https://s.shopee.co.id/4qDvp9qPoo",
+  "https://s.shopee.co.id/4fuVcqr39n",
+  "https://s.shopee.co.id/4Vb5QXrgUm"
 ];
 
 function openShopeeLink() {
