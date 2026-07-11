@@ -22,6 +22,9 @@ const timeChips = [
   "23:00", "23:30", "24:00"
 ];
 
+const packageGroupStyle = { color: '#d4af37' };
+const packageOptionStyle = { color: '#ffffff' };
+
 export default function BookPage() {
   const router = useRouter();
   const [name, setName] = useState('');
@@ -139,24 +142,24 @@ export default function BookPage() {
                       aria-required="true"
                     >
                       <option value="">Jenis Paket</option>
-                      <optgroup label="— Reguler —">
-                        <option value="Normal">Normal</option>
+                      <optgroup label="— Reguler —" style={packageGroupStyle}>
+                        <option value="Normal" style={packageOptionStyle}>Normal</option>
                       </optgroup>
-                      <optgroup label="— Paket Karaoke —">
-                        <option value="Paket Nyantui">Paket Nyantui</option>
-                        <option value="Paket Mode Game">Paket Mode Game</option>
-                        <option value="Paket Nyambar">Paket Nyambar</option>
+                      <optgroup label="— Paket Karaoke —" style={packageGroupStyle}>
+                        <option value="Paket Nyantui" style={packageOptionStyle}>Paket Nyantui</option>
+                        <option value="Paket Mode Game" style={packageOptionStyle}>Paket Mode Game</option>
+                        <option value="Paket Nyambar" style={packageOptionStyle}>Paket Nyambar</option>
                       </optgroup>
-                      <optgroup label="— Promo Khusus —">
-                        <option value="Promo Ulang Tahun">Promo Ulang Tahun</option>
-                        <option value="Promo Senin Murce">Senin Murce</option>
-                        <option value="Promo Tanggal 22">Promo Tanggal 22</option>
-                        <option value="Promo GRWM">Girls Ready With Mic (GRWM)</option>
+                      <optgroup label="— Promo Khusus —" style={packageGroupStyle}>
+                        <option value="Promo Ulang Tahun" style={packageOptionStyle}>Promo Ulang Tahun</option>
+                        <option value="Promo Senin Murce" style={packageOptionStyle}>Senin Murce</option>
+                        <option value="Promo Tanggal 22" style={packageOptionStyle}>Promo Tanggal 22</option>
+                        <option value="Promo GRWM" style={packageOptionStyle}>Girls Ready With Mic (GRWM)</option>
                       </optgroup>
-                      <optgroup label="— Promo Mitra —">
-                        <option value="Promo Telkomsel Poin">Diskon Telkomsel Poin</option>
-                        <option value="Promo Indomaret Poinku">Indomaret Poinku</option>
-                        <option value="Promo Alfagift">Alfagift</option>
+                      <optgroup label="— Promo Mitra —" style={packageGroupStyle}>
+                        <option value="Promo Telkomsel Poin" style={packageOptionStyle}>Diskon Telkomsel Poin</option>
+                        <option value="Promo Indomaret Poinku" style={packageOptionStyle}>Indomaret Poinku</option>
+                        <option value="Promo Alfagift" style={packageOptionStyle}>Alfagift</option>
                       </optgroup>
                     </select>
                     <div style={{ display: 'flex', gap: '10px', marginTop: '8px', fontSize: '11.5px', color: '#888', flexWrap: 'wrap' }}>
