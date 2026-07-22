@@ -30,15 +30,18 @@ const shopeeLinks = [
   "https://s.shopee.co.id/60Q0p6z1zY"
 ];
 
+// ⚠️ DINONAKTIFKAN SEMENTARA — untuk mencegah dianggap klikbait
+// Untuk mengaktifkan kembali, uncomment kode di bawah dan hapus `return;`
 function openShopeeLink() {
-  const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-  const a = document.createElement('a');
-  a.href = randomLink;
-  a.target = '_blank';
-  a.rel = 'noopener noreferrer';
-  document.body.appendChild(a);
-  a.click();
-  setTimeout(() => document.body.removeChild(a), 100);
+  return; // Nonaktif sementara
+  // const randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+  // const a = document.createElement('a');
+  // a.href = randomLink;
+  // a.target = '_blank';
+  // a.rel = 'noopener noreferrer';
+  // document.body.appendChild(a);
+  // a.click();
+  // setTimeout(() => document.body.removeChild(a), 100);
 }
 
 // Elemen interaktif yang TIDAK boleh memicu affiliate
