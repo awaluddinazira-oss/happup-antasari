@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ClientInit from '@/components/ClientInit';
 import ScrollToTop from '@/components/ScrollToTop';
+import SupportButton from '@/components/SupportButton';
 import './globals.css';
 
 export const metadata = {
@@ -110,6 +111,7 @@ export default function RootLayout({ children }) {
             {children}
             <Footer />
             <ScrollToTop />
+            <SupportButton />
           </AffiliateWrapper>
         </CartProvider>
       </body>
