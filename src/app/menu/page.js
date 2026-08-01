@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import { useCart } from '@/context/CartContext';
 import { menuCategories, roomGroups, getMenuImageUrl } from '@/data/menuData';
+import { SITE_CONFIG } from '@/data/siteConfig';
 
 export default function MenuPage() {
   const {
@@ -62,7 +63,7 @@ export default function MenuPage() {
       message += `- ${item.quantity}x ${item.name} (${formatRupiah(item.price * item.quantity)})\n`;
     });
     message += `\n*Total: ${formatRupiah(cartTotal)}*\n\nTerima kasih!`;
-    const waUrl = `https://wa.me/6282148004822?text=${encodeURIComponent(message)}`;
+    const waUrl = `https://wa.me/${SITE_CONFIG.waReservasi}?text=${encodeURIComponent(message)}`;
     window.open(waUrl, '_blank', 'noopener,noreferrer');
     clearCart();
     setIsCartOpen(false);

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { SITE_CONFIG } from '@/data/siteConfig';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -87,7 +88,7 @@ export default function Navbar() {
               </li>
             </ul>
             <div className="user_option">
-              <a href="https://wa.me/6282148004822" className="user_link" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+              <a href={SITE_CONFIG.whatsappUrl} className="user_link" target="_blank" rel="noopener noreferrer" title="WhatsApp">
                 <i className="fa fa-whatsapp" aria-hidden="true"></i>
               </a>
               <a href="https://www.instagram.com/happup.samarinda.antasari/" className="user_link" target="_blank" rel="noopener noreferrer" title="Instagram">

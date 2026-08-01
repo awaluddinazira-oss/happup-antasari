@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ClientInit from '@/components/ClientInit';
 import ScrollToTop from '@/components/ScrollToTop';
 import SupportButton from '@/components/SupportButton';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import './globals.css';
 
 export const metadata = {
@@ -112,6 +113,7 @@ export default function RootLayout({ children }) {
             <Footer />
             <ScrollToTop />
             <SupportButton />
+            <WhatsAppButton />
           </AffiliateWrapper>
         </CartProvider>
       </body>

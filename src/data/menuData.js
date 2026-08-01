@@ -1,3 +1,5 @@
+import { SITE_CONFIG } from '@/data/siteConfig';
+
 export const outlet = {
   name: 'Happy Puppy Antasari',
   tagline: 'Happy Puppy Antasari',
@@ -10,7 +12,7 @@ export const outlet = {
   whatsappIcon: '/images/whatsapp.svg',
   instagramIcon: '/images/instagram.svg',
   facebookIcon: '/images/facebook.svg',
-  whatsappUrl: 'https://wa.me/6282148004822',
+  whatsappUrl: SITE_CONFIG.whatsappUrl,
   instagramUrl: 'https://www.instagram.com/happup.samarinda.antasari/',
   facebookUrl: 'https://www.facebook.com/happup.samarinda.antasari/',
   supportUrl: 'https://s.shopee.co.id/60Q0pKp76y',

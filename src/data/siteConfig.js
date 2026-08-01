@@ -12,4 +12,9 @@ export const SITE_CONFIG = {
 
   siteName: 'Happup Antasari',
   domain: 'https://happupantasari.com',
+
+  /** URL WhatsApp siap pakai untuk reservasi */
+  get whatsappUrl() {
+    return `https://wa.me/${this.waReservasi}`;
+  },
 };
