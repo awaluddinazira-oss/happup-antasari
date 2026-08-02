@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { SITE_CONFIG } from '@/data/siteConfig';
 
@@ -39,7 +40,7 @@ export default function Navbar() {
         <nav className="navbar navbar-expand-lg custom_nav-container">
           <Link className="navbar-brand" href="/">
             <span>
-              <img src="/images/logo.png" alt="Happup Antasari" style={{ maxWidth: '140px' }} />
+              <Image src="/images/logo.png" alt="Happup Antasari" width={140} height={45} style={{ width: 'auto', height: 'auto', maxWidth: '140px' }} priority />
             </span>
           </Link>
 

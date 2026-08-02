@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function BookSuccessPage() {
@@ -9,8 +10,7 @@ export default function BookSuccessPage() {
     <main className="sub_page">
       <div className="hero_area" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         <div className="bg-box">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/hero-bg.jpg" alt="Hero background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <Image src="/images/hero-bg.jpg" alt="Hero background" fill style={{ objectFit: 'cover' }} priority />
         </div>
         <Navbar />
 

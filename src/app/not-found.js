@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 
@@ -11,7 +12,7 @@ export default function NotFound() {
     <main className="sub_page">
       <div className="hero_area" style={{ minHeight: 'auto' }}>
         <div className="bg-box">
-          <img src="/images/hero-bg.jpg" alt="Hero background" />
+          <Image src="/images/hero-bg.jpg" alt="Hero background" fill style={{ objectFit: 'cover' }} priority />
         </div>
         <Navbar />
       </div>

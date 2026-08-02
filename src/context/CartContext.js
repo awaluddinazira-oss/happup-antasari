@@ -50,8 +50,13 @@ export function CartProvider({ children }) {
 
   const addToCart = (menuItem) => {
     if (!selectedRoom) {
-      alert('Silakan pilih Nomor Room terlebih dahulu (Langkah 1) sebelum menambahkan menu!');
-      
+      // Show warning toast instead of alert
+      if (typeof window !== 'undefined' && window.showToast) {
+        window.showToast('Silakan pilih Nomor Room terlebih dahulu!', 'warning', 3500);
+      } else {
+        alert('Silakan pilih Nomor Room terlebih dahulu (Langkah 1) sebelum menambahkan menu!');
+      }
+
       const roomPickerCard = document.querySelector('.room-picker-card');
       if (roomPickerCard) {
         roomPickerCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -61,14 +66,32 @@ export function CartProvider({ children }) {
 
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.name === menuItem.name);
+      let isNewItem = false;
+      let newCart;
+
       if (existingItem) {
-        return prevCart.map((item) =>
+        newCart = prevCart.map((item) =>
           item.name === menuItem.name
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
+      } else {
+        newCart = [...prevCart, { ...menuItem, quantity: 1 }];
+        isNewItem = true;
       }
-      return [...prevCart, { ...menuItem, quantity: 1 }];
+
+      // Show success toast after state update
+      setTimeout(() => {
+        if (typeof window !== 'undefined' && window.showToast) {
+          if (isNewItem) {
+            window.showToast(`${menuItem.name} ditambahkan ke keranjang!`, 'success', 2500);
+          } else {
+            window.showToast(`${menuItem.name} +1`, 'success', 2000);
+          }
+        }
+      }, 0);
+
+      return newCart;
     });
   };
 
@@ -78,17 +101,37 @@ export function CartProvider({ children }) {
       if (!existingItem) return prevCart;
 
       if (existingItem.quantity > 1) {
+        // Show toast for quantity decrease
+        setTimeout(() => {
+          if (typeof window !== 'undefined' && window.showToast) {
+            window.showToast(`${itemName} dikurangi`, 'info', 2000);
+          }
+        }, 0);
+
         return prevCart.map((item) =>
           item.name === itemName
             ? { ...item, quantity: item.quantity - 1 }
             : item
         );
       }
+
+      // Show toast for item removal
+      setTimeout(() => {
+        if (typeof window !== 'undefined' && window.showToast) {
+          window.showToast(`${itemName} dihapus dari keranjang`, 'info', 2000);
+        }
+      }, 0);
+
       return prevCart.filter((item) => item.name !== itemName);
     });
   };
 
   const deleteCartItem = (itemName) => {
+    // Show toast before removing
+    if (typeof window !== 'undefined' && window.showToast) {
+      window.showToast(`${itemName} dihapus dari keranjang`, 'info', 2000);
+    }
+
     setCart((prevCart) => prevCart.filter((item) => item.name !== itemName));
   };
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import { useCart } from '@/context/CartContext';
 import { menuCategories, roomGroups, getMenuImageUrl } from '@/data/menuData';
@@ -87,7 +88,7 @@ export default function MenuPage() {
       {/* ── HERO ── */}
       <div className="hero_area">
         <div className="bg-box">
-          <img src="/images/hero-bg.jpg" alt="Hero background" />
+          <Image src="/images/hero-bg.jpg" alt="Hero background" fill style={{ objectFit: 'cover' }} priority />
         </div>
         <Navbar />
       </div>

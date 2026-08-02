@@ -1,0 +1,14 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow paths that don't need indexing
+Disallow: /api/
+Disallow: /_next/
+Disallow: /book/success
+
+# Sitemap
+Sitemap: https://happupantasari.com/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1

@@ -140,7 +140,7 @@ export default function Home() {
                   <div className="box">
                     <div className="img-box">
                       <a href="/images/Paket-nyantui.png" target="_blank" rel="noopener noreferrer">
-                        <img src="/images/Paket-nyantui.png" alt="Paket Nyantui" />
+                        <Image src="/images/Paket-nyantui.png" alt="Paket Nyantui" width={300} height={200} style={{ width: '100%', height: 'auto' }} />
                       </a>
                     </div>
                     <div className="detail-box">
@@ -156,7 +156,7 @@ export default function Home() {
                   <div className="box">
                     <div className="img-box">
                       <a href="/images/Paket-hepimode-game.png" target="_blank" rel="noopener noreferrer">
-                        <img src="/images/Paket-hepimode-game.png" alt="Paket Mode Game" />
+                        <Image src="/images/Paket-hepimode-game.png" alt="Paket Mode Game" width={300} height={200} style={{ width: '100%', height: 'auto' }} />
                       </a>
                     </div>
                     <div className="detail-box">
@@ -172,7 +172,7 @@ export default function Home() {
                   <div className="box">
                     <div className="img-box">
                       <a href="/images/Paket-nyambar.png" target="_blank" rel="noopener noreferrer">
-                        <img src="/images/Paket-nyambar.png?v=2" alt="Paket Nyambar" />
+                        <Image src="/images/Paket-nyambar.png" alt="Paket Nyambar" width={300} height={200} style={{ width: '100%', height: 'auto' }} />
                       </a>
                     </div>
                     <div className="detail-box">
@@ -208,7 +208,7 @@ export default function Home() {
                   <div className="box">
                     <div>
                       <div className="img-box">
-                        <img
+                        <Image
                           src={getMenuImageUrl(item.image)}
                           alt={item.name}
                           width={300}

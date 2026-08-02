@@ -6,36 +6,105 @@ import ClientInit from '@/components/ClientInit';
 import ScrollToTop from '@/components/ScrollToTop';
 import SupportButton from '@/components/SupportButton';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ToastContainer from '@/components/ToastContainer';
+import InstallPrompt from '@/components/InstallPrompt';
+import PWAInit from '@/components/PWAInit';
 import './globals.css';
 
+export const metadataBase = new URL('https://happupantasari.com');
+
 export const metadata = {
-  title: 'Happup Antasari — Karaoke Keluarga Terbaik di Samarinda',
-  description: 'Tempat karaoke keluarga terbaik dengan fasilitas modern, pilihan lagu terlengkap, dan suasana yang nyaman untuk momen seru Anda.',
+  metadataBase,
+  title: {
+    default: 'Happup Antasari — Karaoke Keluarga Terbaik di Samarinda',
+    template: '%s | Happup Antasari',
+  },
+  description: 'Tempat karaoke keluarga terbaik dengan fasilitas modern, pilihan lagu terlengkap, dan suasana yang nyaman untuk momen seru Anda di Samarinda.',
+  keywords: [
+    'karaoke samarinda',
+    'karaoke keluarga',
+    'happy puppy antasari',
+    'happup samarinda',
+    'tempat karaoke samarinda',
+    'karaoke terbaik samarinda',
+    'reservasi karaoke',
+    'room karaoke samarinda',
+    'promo karaoke',
+  ],
+  authors: [{ name: 'Happup Antasari' }],
+  creator: 'Happup Antasari',
+  publisher: 'Happup Antasari',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+    languages: {
+      'id-ID': '/',
+    },
+  },
   icons: {
     icon: '/images/favicon.png?v=2',
+    apple: '/images/apple-touch-icon.png',
+    shortcut: '/images/favicon-32x32.png',
+  },
+  manifest: '/manifest.json',
+  verification: {
+    google: 'YOUR_GOOGLE_VERIFICATION_CODE', // Ganti dengan kode verifikasi Google Search Console
+    yandex: 'YOUR_YANDEX_VERIFICATION_CODE',
   },
   openGraph: {
-    title: 'Happup Antasari — Karaoke Keluarga Terbaik di Samarinda',
-    description: 'Nikmati karaoke modern dengan room nyaman, sound berkualitas, pilihan makanan & minuman favorit, serta promo menarik setiap hari.',
+    type: 'website',
+    locale: 'id_ID',
     url: 'https://happupantasari.com',
     siteName: 'Happup Antasari',
+    title: 'Happup Antasari — Karaoke Keluarga Terbaik di Samarinda',
+    description: 'Nikmati karaoke modern dengan room nyaman, sound berkualitas, pilihan makanan & minuman favorit, serta promo menarik setiap hari.',
     images: [
       {
         url: '/images/og-preview.jpg',
         width: 1200,
         height: 630,
         alt: 'Happy Puppy Antasari Karaoke Samarinda',
+        type: 'image/jpeg',
+      },
+      {
+        url: '/images/og-square.jpg',
+        width: 1080,
+        height: 1080,
+        alt: 'Happy Puppy Antasari Logo',
+        type: 'image/jpeg',
       },
     ],
-    locale: 'id_ID',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@happupantasari',
+    creator: '@happupantasari',
     title: 'Happup Antasari — Karaoke Keluarga Terbaik di Samarinda',
     description: 'Nikmati karaoke modern dengan room nyaman, sound berkualitas, pilihan makanan & minuman favorit, serta promo menarik setiap hari.',
     images: ['/images/og-preview.jpg'],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#13161c',
 };
 
 export default function RootLayout({ children }) {
@@ -44,7 +113,6 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         {/* Bootstrap */}
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
         {/* Font Awesome */}
@@ -109,6 +177,9 @@ export default function RootLayout({ children }) {
         <CartProvider>
           <AffiliateWrapper>
             <ClientInit />
+            <ToastContainer />
+            <PWAInit />
+            <InstallPrompt />
             {children}
             <Footer />
             <ScrollToTop />

@@ -1,0 +1,104 @@
+{
+  "name": "Happy Puppy Antasari",
+  "short_name": "Happup",
+  "description": "Tempat karaoke keluarga terbaik di Samarinda dengan fasilitas modern dan promo menarik.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#13161c",
+  "theme_color": "#d4af37",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "id-ID",
+  "categories": ["entertainment", "lifestyle"],
+  "icons": [
+    {
+      "src": "/images/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Tampilan utama Happup Antasari"
+    },
+    {
+      "src": "/images/screenshot-narrow.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Tampilan mobile Happup Antasari"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Reservasi Room",
+      "short_name": "Reservasi",
+      "description": "Booking room karaoke",
+      "url": "/book",
+      "icons": [{ "src": "/images/icon-book.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Lihat Menu",
+      "short_name": "Menu",
+      "description": "Lihat menu makanan & minuman",
+      "url": "/menu",
+      "icons": [{ "src": "/images/icon-menu.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Promo Spesial",
+      "short_name": "Promo",
+      "description": "Lihat promo menarik",
+      "url": "/promo",
+      "icons": [{ "src": "/images/icon-promo.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
