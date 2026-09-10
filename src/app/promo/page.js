@@ -10,8 +10,8 @@ const seninMurceSlides = [
   { src: '/images/syarat-murce.jpeg',   alt: 'Syarat Minimal Order Senin Murce', caption: 'Syarat Minimal Order' },
 ];
 
-const grwmSlides = [
-  { src: '/images/syarat-grwm.jpeg', alt: 'Syarat & Ketentuan Girls Ready With Mic', caption: 'Syarat & Ketentuan GRWM' },
+const partyCallSlides = [
+  { src: '/images/syarat-party-call.jpeg', alt: 'Syarat & Ketentuan Promo Party Call', caption: 'Syarat & Ketentuan Party Call' },
 ];
 
 export default function AboutPage() {
@@ -177,11 +177,11 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Box Promo 4: GRWM */}
+            {/* Box Promo 4: Party Call */}
             <div className="promo-card" data-aos="fade-up" data-aos-delay="300">
               <span className="promo-badge">Ladies Special</span>
-              <div className="promo-img-wrapper" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => openModal(grwmSlides, 0)}>
-                <Image src="/images/promo-grwm.jpg" alt="Promo GRWM" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
+              <div className="promo-img-wrapper" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => openModal(partyCallSlides, 0)}>
+                <Image src="/images/promo-party-call.jpeg" alt="Promo Party Call" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
                 <div style={{
                   position: 'absolute', inset: 0,
                   background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)',
@@ -194,12 +194,12 @@ export default function AboutPage() {
               </div>
               <div className="promo-info">
                 <div>
-                  <h4>Girls Ready With Mic</h4>
-                  <p>Untuk kamu para cewek yang memakai Jersey Piala Dunia, nikmati GRATIS Karaoke selama 2 Jam setiap hari Selasa &amp; Rabu. No Jersey, No Party!</p>
+                  <h4>Promo Party Call</h4>
+                  <p>Gratis party 2 jam tanpa minimum order setiap Selasa &amp; Rabu. Cukup follow Instagram, tulis ulasan bintang 5 di Google Maps, dan unggah Instagram Story.</p>
                 </div>
                 <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
                   <button
-                    onClick={() => openModal(grwmSlides, 0)}
+                    onClick={() => openModal(partyCallSlides, 0)}
                     style={{
                       width: '100%', padding: '10px', borderRadius: '8px', border: '2px solid #27ae60',
                       background: 'transparent', color: '#27ae60', fontWeight: 700, fontSize: '14px',
