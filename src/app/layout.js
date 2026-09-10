@@ -12,6 +12,7 @@ import PWAInit from '@/components/PWAInit';
 import './globals.css';
 
 export const metadataBase = new URL('https://happupantasari.com');
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION;
 
 export const metadata = {
   metadataBase,
@@ -51,10 +52,7 @@ export const metadata = {
     shortcut: '/images/favicon-32x32.png',
   },
   manifest: '/manifest.json',
-  verification: {
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE', // Ganti dengan kode verifikasi Google Search Console
-    yandex: 'YOUR_YANDEX_VERIFICATION_CODE',
-  },
+  verification: googleSiteVerification ? { google: googleSiteVerification } : undefined,
   openGraph: {
     type: 'website',
     locale: 'id_ID',

@@ -179,7 +179,7 @@ export default function AboutPage() {
 
             {/* Box Promo 4: Party Call */}
             <div className="promo-card" data-aos="fade-up" data-aos-delay="300">
-              <span className="promo-badge">Ladies Special</span>
+              <span className="promo-badge">Party Special</span>
               <div className="promo-img-wrapper" style={{ position: 'relative', cursor: 'pointer' }} onClick={() => openModal(partyCallSlides, 0)}>
                 <Image src="/images/promo-party-call.jpeg" alt="Promo Party Call" width={480} height={300} style={{ width: '100%', height: 'auto' }} />
                 <div style={{

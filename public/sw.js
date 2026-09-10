@@ -1,25 +1,9 @@
 // Service Worker for Happup Antasari PWA
-const CACHE_NAME = 'happup-v1';
-const STATIC_ASSETS = [
-  '/',
-  '/menu',
-  '/promo',
-  '/galeri',
-  '/book',
-  '/feedback',
-  '/manifest.json',
-];
+const CACHE_PREFIX = 'happup-';
 
-// Install event - cache static assets
+// Do not cache Next.js pages or bundles here. Their versions change on deploy.
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Caching static assets');
-      return cache.addAll(STATIC_ASSETS);
-    })
-  );
-  // Activate immediately
-  self.skipWaiting();
+  event.waitUntil(self.skipWaiting());
 });
 
 // Activate event - clean up old caches
@@ -28,7 +12,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter((name) => name !== CACHE_NAME)
+          .filter((name) => name.startsWith(CACHE_PREFIX))
           .map((name) => {
             console.log('[SW] Deleting old cache:', name);
             return caches.delete(name);
@@ -36,55 +20,7 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
-  // Take control of all clients immediately
-  self.clients.claim();
-});
-
-// Fetch event - serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {
-  // Skip non-GET requests
-  if (event.request.method !== 'GET') return;
-
-  // Skip cross-origin requests
-  if (!event.request.url.startsWith(self.location.origin)) return;
-
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        // Return cached response and update cache in background
-        event.waitUntil(
-          fetch(event.request).then((networkResponse) => {
-            if (networkResponse && networkResponse.status === 200) {
-              caches.open(CACHE_NAME).then((cache) => {
-                cache.put(event.request, networkResponse.clone());
-              });
-            }
-          }).catch(() => {
-            // Network failed, but we have cache, so it's okay
-          })
-        );
-        return cachedResponse;
-      }
-
-      // No cache, try network
-      return fetch(event.request).then((networkResponse) => {
-        // Cache successful responses
-        if (networkResponse && networkResponse.status === 200) {
-          const responseClone = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone);
-          });
-        }
-        return networkResponse;
-      }).catch(() => {
-        // Network failed and no cache - return offline page for navigation requests
-        if (event.request.mode === 'navigate') {
-          return caches.match('/');
-        }
-        return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
-      });
-    })
-  );
+  event.waitUntil(self.clients.claim());
 });
 
 // Handle push notifications (for future use)
