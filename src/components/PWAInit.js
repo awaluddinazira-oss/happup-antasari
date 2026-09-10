@@ -13,6 +13,17 @@ export default function PWAInit() {
     if (!isMounted) return;
 
     if ('serviceWorker' in navigator) {
+      // Service workers cache development assets and interfere with Fast Refresh.
+      if (process.env.NODE_ENV !== 'production') {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          registrations.forEach((registration) => registration.unregister());
+        });
+        caches.keys().then((cacheNames) => {
+          cacheNames.forEach((cacheName) => caches.delete(cacheName));
+        });
+        return;
+      }
+
       // Register service worker
       navigator.serviceWorker
         .register('/sw.js')
@@ -36,9 +47,14 @@ export default function PWAInit() {
         });
 
       // Handle controller change (when new SW takes over)
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
+      const handleControllerChange = () => {
         console.log('[SW] Controller changed');
-      });
+      };
+      navigator.serviceWorker.addEventListener('controllerchange', handleControllerChange);
+
+      return () => {
+        navigator.serviceWorker.removeEventListener('controllerchange', handleControllerChange);
+      };
     }
   }, [isMounted]);
 

@@ -72,7 +72,7 @@ export default function BookPage() {
       filtered = allRooms.filter(r => r.value !== 'Royal Suite');
     } else if (
       pkg === 'Promo Tanggal 22' ||
-      pkg === 'Promo GRWM' ||
+      pkg === 'Promo Party Call' ||
       pkg === 'Promo Telkomsel Poin' ||
       pkg === 'Promo Indomaret Poinku' ||
       pkg === 'Promo Alfagift'
@@ -300,7 +300,7 @@ export default function BookPage() {
                         <option value="Promo Ulang Tahun" style={packageOptionStyle}>Promo Ulang Tahun</option>
                         <option value="Promo Senin Murce" style={packageOptionStyle}>Senin Murce</option>
                         <option value="Promo Tanggal 22" style={packageOptionStyle}>Promo Tanggal 22</option>
-                        <option value="Promo GRWM" style={packageOptionStyle}>Girls Ready With Mic (GRWM)</option>
+                        <option value="Promo Party Call" style={packageOptionStyle}>Promo Party Call</option>
                       </optgroup>
                       <optgroup label="— Promo Mitra —" style={packageGroupStyle}>
                         <option value="Promo Telkomsel Poin" style={packageOptionStyle}>Diskon Telkomsel Poin</option>
